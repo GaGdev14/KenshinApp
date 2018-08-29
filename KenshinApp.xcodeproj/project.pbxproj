@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFC2136B02F00073340 /* AppDelegate.swift */; };
 		EF508CFF2136B02F00073340 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFE2136B02F00073340 /* ViewController.swift */; };
-		EF508D022136B02F00073340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D002136B02F00073340 /* Main.storyboard */; };
+		EF508D022136B02F00073340 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D002136B02F00073340 /* Login.storyboard */; };
 		EF508D042136B02F00073340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF508D032136B02F00073340 /* Assets.xcassets */; };
 		EF508D072136B02F00073340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D052136B02F00073340 /* LaunchScreen.storyboard */; };
 		EF508D122136B03000073340 /* KenshinAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508D112136B03000073340 /* KenshinAppTests.swift */; };
@@ -37,7 +37,7 @@
 		EF508CF92136B02F00073340 /* KenshinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KenshinApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF508CFC2136B02F00073340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF508CFE2136B02F00073340 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EF508D012136B02F00073340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF508D012136B02F00073340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		EF508D032136B02F00073340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF508D062136B02F00073340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF508D082136B02F00073340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,7 +99,7 @@
 			children = (
 				EF508CFC2136B02F00073340 /* AppDelegate.swift */,
 				EF508CFE2136B02F00073340 /* ViewController.swift */,
-				EF508D002136B02F00073340 /* Main.storyboard */,
+				EF508D002136B02F00073340 /* Login.storyboard */,
 				EF508D032136B02F00073340 /* Assets.xcassets */,
 				EF508D052136B02F00073340 /* LaunchScreen.storyboard */,
 				EF508D082136B02F00073340 /* Info.plist */,
@@ -231,7 +231,7 @@
 			files = (
 				EF508D072136B02F00073340 /* LaunchScreen.storyboard in Resources */,
 				EF508D042136B02F00073340 /* Assets.xcassets in Resources */,
-				EF508D022136B02F00073340 /* Main.storyboard in Resources */,
+				EF508D022136B02F00073340 /* Login.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,12 +293,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EF508D002136B02F00073340 /* Main.storyboard */ = {
+		EF508D002136B02F00073340 /* Login.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EF508D012136B02F00073340 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 		EF508D052136B02F00073340 /* LaunchScreen.storyboard */ = {
