@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFC2136B02F00073340 /* AppDelegate.swift */; };
+		EF508CFF2136B02F00073340 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFE2136B02F00073340 /* ViewController.swift */; };
+		EF508D022136B02F00073340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D002136B02F00073340 /* Main.storyboard */; };
+		EF508D042136B02F00073340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF508D032136B02F00073340 /* Assets.xcassets */; };
+		EF508D072136B02F00073340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D052136B02F00073340 /* LaunchScreen.storyboard */; };
+		EF508D122136B03000073340 /* KenshinAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508D112136B03000073340 /* KenshinAppTests.swift */; };
+		EF508D1D2136B03000073340 /* KenshinAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508D1C2136B03000073340 /* KenshinAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF508D0E2136B03000073340 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF508CF12136B02F00073340 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF508CF82136B02F00073340;
+			remoteInfo = KenshinApp;
+		};
+		EF508D192136B03000073340 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF508CF12136B02F00073340 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF508CF82136B02F00073340;
+			remoteInfo = KenshinApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF508CF92136B02F00073340 /* KenshinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KenshinApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF508CFC2136B02F00073340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF508CFE2136B02F00073340 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF508D012136B02F00073340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF508D032136B02F00073340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF508D062136B02F00073340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF508D082136B02F00073340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF508D0D2136B03000073340 /* KenshinAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KenshinAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF508D112136B03000073340 /* KenshinAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenshinAppTests.swift; sourceTree = "<group>"; };
+		EF508D132136B03000073340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF508D182136B03000073340 /* KenshinAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KenshinAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF508D1C2136B03000073340 /* KenshinAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenshinAppUITests.swift; sourceTree = "<group>"; };
+		EF508D1E2136B03000073340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF508CF62136B02F00073340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508D0A2136B03000073340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508D152136B03000073340 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF508CF02136B02F00073340 = {
+			isa = PBXGroup;
+			children = (
+				EF508CFB2136B02F00073340 /* KenshinApp */,
+				EF508D102136B03000073340 /* KenshinAppTests */,
+				EF508D1B2136B03000073340 /* KenshinAppUITests */,
+				EF508CFA2136B02F00073340 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF508CFA2136B02F00073340 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CF92136B02F00073340 /* KenshinApp.app */,
+				EF508D0D2136B03000073340 /* KenshinAppTests.xctest */,
+				EF508D182136B03000073340 /* KenshinAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF508CFB2136B02F00073340 /* KenshinApp */ = {
+			isa = PBXGroup;
+			children = (
+				EF508CFC2136B02F00073340 /* AppDelegate.swift */,
+				EF508CFE2136B02F00073340 /* ViewController.swift */,
+				EF508D002136B02F00073340 /* Main.storyboard */,
+				EF508D032136B02F00073340 /* Assets.xcassets */,
+				EF508D052136B02F00073340 /* LaunchScreen.storyboard */,
+				EF508D082136B02F00073340 /* Info.plist */,
+			);
+			path = KenshinApp;
+			sourceTree = "<group>";
+		};
+		EF508D102136B03000073340 /* KenshinAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF508D112136B03000073340 /* KenshinAppTests.swift */,
+				EF508D132136B03000073340 /* Info.plist */,
+			);
+			path = KenshinAppTests;
+			sourceTree = "<group>";
+		};
+		EF508D1B2136B03000073340 /* KenshinAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF508D1C2136B03000073340 /* KenshinAppUITests.swift */,
+				EF508D1E2136B03000073340 /* Info.plist */,
+			);
+			path = KenshinAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF508CF82136B02F00073340 /* KenshinApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF508D212136B03000073340 /* Build configuration list for PBXNativeTarget "KenshinApp" */;
+			buildPhases = (
+				EF508CF52136B02F00073340 /* Sources */,
+				EF508CF62136B02F00073340 /* Frameworks */,
+				EF508CF72136B02F00073340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KenshinApp;
+			productName = KenshinApp;
+			productReference = EF508CF92136B02F00073340 /* KenshinApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF508D0C2136B03000073340 /* KenshinAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF508D242136B03000073340 /* Build configuration list for PBXNativeTarget "KenshinAppTests" */;
+			buildPhases = (
+				EF508D092136B03000073340 /* Sources */,
+				EF508D0A2136B03000073340 /* Frameworks */,
+				EF508D0B2136B03000073340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF508D0F2136B03000073340 /* PBXTargetDependency */,
+			);
+			name = KenshinAppTests;
+			productName = KenshinAppTests;
+			productReference = EF508D0D2136B03000073340 /* KenshinAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF508D172136B03000073340 /* KenshinAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF508D272136B03000073340 /* Build configuration list for PBXNativeTarget "KenshinAppUITests" */;
+			buildPhases = (
+				EF508D142136B03000073340 /* Sources */,
+				EF508D152136B03000073340 /* Frameworks */,
+				EF508D162136B03000073340 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF508D1A2136B03000073340 /* PBXTargetDependency */,
+			);
+			name = KenshinAppUITests;
+			productName = KenshinAppUITests;
+			productReference = EF508D182136B03000073340 /* KenshinAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF508CF12136B02F00073340 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = GaGdev14;
+				TargetAttributes = {
+					EF508CF82136B02F00073340 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					EF508D0C2136B03000073340 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = EF508CF82136B02F00073340;
+					};
+					EF508D172136B03000073340 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = EF508CF82136B02F00073340;
+					};
+				};
+			};
+			buildConfigurationList = EF508CF42136B02F00073340 /* Build configuration list for PBXProject "KenshinApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF508CF02136B02F00073340;
+			productRefGroup = EF508CFA2136B02F00073340 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF508CF82136B02F00073340 /* KenshinApp */,
+				EF508D0C2136B03000073340 /* KenshinAppTests */,
+				EF508D172136B03000073340 /* KenshinAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF508CF72136B02F00073340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF508D072136B02F00073340 /* LaunchScreen.storyboard in Resources */,
+				EF508D042136B02F00073340 /* Assets.xcassets in Resources */,
+				EF508D022136B02F00073340 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508D0B2136B03000073340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508D162136B03000073340 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF508CF52136B02F00073340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF508CFF2136B02F00073340 /* ViewController.swift in Sources */,
+				EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508D092136B03000073340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF508D122136B03000073340 /* KenshinAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF508D142136B03000073340 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF508D1D2136B03000073340 /* KenshinAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF508D0F2136B03000073340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF508CF82136B02F00073340 /* KenshinApp */;
+			targetProxy = EF508D0E2136B03000073340 /* PBXContainerItemProxy */;
+		};
+		EF508D1A2136B03000073340 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF508CF82136B02F00073340 /* KenshinApp */;
+			targetProxy = EF508D192136B03000073340 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF508D002136B02F00073340 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF508D012136B02F00073340 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF508D052136B02F00073340 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF508D062136B02F00073340 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF508D1F2136B03000073340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF508D202136B03000073340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF508D222136B03000073340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KenshinApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.KenshinApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF508D232136B03000073340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KenshinApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.KenshinApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF508D252136B03000073340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KenshinAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.KenshinAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KenshinApp.app/KenshinApp";
+			};
+			name = Debug;
+		};
+		EF508D262136B03000073340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KenshinAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.KenshinAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KenshinApp.app/KenshinApp";
+			};
+			name = Release;
+		};
+		EF508D282136B03000073340 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KenshinAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.KenshinAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KenshinApp;
+			};
+			name = Debug;
+		};
+		EF508D292136B03000073340 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = KenshinAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.dev.KenshinAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KenshinApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF508CF42136B02F00073340 /* Build configuration list for PBXProject "KenshinApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF508D1F2136B03000073340 /* Debug */,
+				EF508D202136B03000073340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF508D212136B03000073340 /* Build configuration list for PBXNativeTarget "KenshinApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF508D222136B03000073340 /* Debug */,
+				EF508D232136B03000073340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF508D242136B03000073340 /* Build configuration list for PBXNativeTarget "KenshinAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF508D252136B03000073340 /* Debug */,
+				EF508D262136B03000073340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF508D272136B03000073340 /* Build configuration list for PBXNativeTarget "KenshinAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF508D282136B03000073340 /* Debug */,
+				EF508D292136B03000073340 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF508CF12136B02F00073340 /* Project object */;
+}
