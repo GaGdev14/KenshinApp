@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFC2136B02F00073340 /* AppDelegate.swift */; };
 		EF508CFF2136B02F00073340 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFE2136B02F00073340 /* ViewController.swift */; };
-		EF508D022136B02F00073340 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D002136B02F00073340 /* Login.storyboard */; };
+		EF508D022136B02F00073340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D002136B02F00073340 /* Main.storyboard */; };
 		EF508D042136B02F00073340 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF508D032136B02F00073340 /* Assets.xcassets */; };
 		EF508D072136B02F00073340 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D052136B02F00073340 /* LaunchScreen.storyboard */; };
 		EF508D122136B03000073340 /* KenshinAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508D112136B03000073340 /* KenshinAppTests.swift */; };
 		EF508D1D2136B03000073340 /* KenshinAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508D1C2136B03000073340 /* KenshinAppUITests.swift */; };
+		EF508D2B2136B2D600073340 /* GasMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D2A2136B2D600073340 /* GasMenu.storyboard */; };
+		EF508D2D2136B66500073340 /* GasMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508D2C2136B66500073340 /* GasMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 		EF508CF92136B02F00073340 /* KenshinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KenshinApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF508CFC2136B02F00073340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF508CFE2136B02F00073340 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EF508D012136B02F00073340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		EF508D012136B02F00073340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF508D032136B02F00073340 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF508D062136B02F00073340 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF508D082136B02F00073340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		EF508D182136B03000073340 /* KenshinAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KenshinAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF508D1C2136B03000073340 /* KenshinAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenshinAppUITests.swift; sourceTree = "<group>"; };
 		EF508D1E2136B03000073340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF508D2A2136B2D600073340 /* GasMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GasMenu.storyboard; sourceTree = "<group>"; };
+		EF508D2C2136B66500073340 /* GasMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +103,12 @@
 			children = (
 				EF508CFC2136B02F00073340 /* AppDelegate.swift */,
 				EF508CFE2136B02F00073340 /* ViewController.swift */,
-				EF508D002136B02F00073340 /* Login.storyboard */,
+				EF508D002136B02F00073340 /* Main.storyboard */,
+				EF508D2A2136B2D600073340 /* GasMenu.storyboard */,
 				EF508D032136B02F00073340 /* Assets.xcassets */,
 				EF508D052136B02F00073340 /* LaunchScreen.storyboard */,
 				EF508D082136B02F00073340 /* Info.plist */,
+				EF508D2C2136B66500073340 /* GasMenuViewController.swift */,
 			);
 			path = KenshinApp;
 			sourceTree = "<group>";
@@ -230,8 +236,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF508D072136B02F00073340 /* LaunchScreen.storyboard in Resources */,
+				EF508D2B2136B2D600073340 /* GasMenu.storyboard in Resources */,
 				EF508D042136B02F00073340 /* Assets.xcassets in Resources */,
-				EF508D022136B02F00073340 /* Login.storyboard in Resources */,
+				EF508D022136B02F00073340 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF508CFF2136B02F00073340 /* ViewController.swift in Sources */,
+				EF508D2D2136B66500073340 /* GasMenuViewController.swift in Sources */,
 				EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,12 +301,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EF508D002136B02F00073340 /* Login.storyboard */ = {
+		EF508D002136B02F00073340 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				EF508D012136B02F00073340 /* Base */,
 			);
-			name = Login.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		EF508D052136B02F00073340 /* LaunchScreen.storyboard */ = {
