@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7221BDF4214212570070320D /* VCResultReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221BDF3214212570070320D /* VCResultReport.swift */; };
 		EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFC2136B02F00073340 /* AppDelegate.swift */; };
 		EF508CFF2136B02F00073340 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFE2136B02F00073340 /* ViewController.swift */; };
 		EF508D022136B02F00073340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D002136B02F00073340 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7221BDF3214212570070320D /* VCResultReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCResultReport.swift; sourceTree = "<group>"; };
 		EF508CF92136B02F00073340 /* KenshinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KenshinApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF508CFC2136B02F00073340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF508CFE2136B02F00073340 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				EF508D30213D2A2400073340 /* Customer.storyboard */,
 				EF508D2E213D1E7300073340 /* GohSelect.storyboard */,
 				EF508D34213D2B9200073340 /* ResultReportStoryboard.storyboard */,
+				7221BDF3214212570070320D /* VCResultReport.swift */,
 				EF508D032136B02F00073340 /* Assets.xcassets */,
 				EF508D052136B02F00073340 /* LaunchScreen.storyboard */,
 				EF508D082136B02F00073340 /* Info.plist */,
@@ -278,6 +281,7 @@
 				EF508CFF2136B02F00073340 /* ViewController.swift in Sources */,
 				EF508D2D2136B66500073340 /* GasMenuViewController.swift in Sources */,
 				EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */,
+				7221BDF4214212570070320D /* VCResultReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
