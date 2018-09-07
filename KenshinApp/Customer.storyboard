@@ -27,6 +27,14 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ5-5z-Kau">
+                                <rect key="frame" x="89" y="500" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="n4x-HW-qCB" kind="show" id="rkf-Dg-jCA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PKL-vx-5ko"/>
@@ -35,6 +43,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kcl-km-XA5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73" y="95"/>
+        </scene>
+        <!--ResultReport-->
+        <scene sceneID="EQU-CS-7x4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ResultReport" id="n4x-HW-qCB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hlP-F0-TgC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="676" y="221"/>
         </scene>
     </scenes>
 </document>
