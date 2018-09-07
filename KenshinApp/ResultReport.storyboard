@@ -91,16 +91,25 @@
                                             <segue destination="0TH-CR-ejK" kind="embed" id="kZF-UW-GWf"/>
                                         </connections>
                                     </containerView>
+                                    <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMy-OL-GDs">
+                                        <rect key="frame" x="0.0" y="-17" width="375" height="3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.14999999999999999"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="FMy-OL-GDs" firstAttribute="trailing" secondItem="OWi-oV-o3l" secondAttribute="trailing" id="5hQ-SL-tq2"/>
                                     <constraint firstItem="OWi-oV-o3l" firstAttribute="top" secondItem="UxB-ha-v9a" secondAttribute="top" constant="11" id="KPK-53-pcG"/>
                                     <constraint firstItem="OWi-oV-o3l" firstAttribute="leading" secondItem="bej-ao-0vU" secondAttribute="leading" id="NSe-QQ-3No"/>
+                                    <constraint firstItem="bej-ao-0vU" firstAttribute="top" secondItem="FMy-OL-GDs" secondAttribute="bottom" constant="25" id="Oct-zj-415"/>
                                     <constraint firstItem="bej-ao-0vU" firstAttribute="bottom" secondItem="OWi-oV-o3l" secondAttribute="bottom" id="Usu-MR-jXZ"/>
                                     <constraint firstAttribute="trailing" secondItem="bej-ao-0vU" secondAttribute="trailing" id="ZMG-tT-kVi"/>
                                     <constraint firstItem="OWi-oV-o3l" firstAttribute="trailing" secondItem="bej-ao-0vU" secondAttribute="trailing" id="bgv-cO-kXk"/>
                                     <constraint firstAttribute="bottom" secondItem="bej-ao-0vU" secondAttribute="bottom" id="g22-vi-lm8"/>
                                     <constraint firstItem="OWi-oV-o3l" firstAttribute="top" secondItem="bej-ao-0vU" secondAttribute="top" id="l6k-Vq-qEQ"/>
+                                    <constraint firstItem="FMy-OL-GDs" firstAttribute="top" secondItem="UxB-ha-v9a" secondAttribute="top" constant="-17" id="uKU-Uw-0md"/>
+                                    <constraint firstItem="FMy-OL-GDs" firstAttribute="leading" secondItem="bej-ao-0vU" secondAttribute="leading" id="w6T-Tg-RaD"/>
                                     <constraint firstItem="OWi-oV-o3l" firstAttribute="leading" secondItem="UxB-ha-v9a" secondAttribute="leading" id="zzN-y1-xRG"/>
                                 </constraints>
                             </view>
@@ -202,6 +211,30 @@
                                 <rect key="frame" x="120" y="52" width="7" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNb-eZ-v7Z" customClass="Button_Custom" customModule="KenshinApp">
+                                <rect key="frame" x="242" y="356" width="119" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" title="→">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="26"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="wrd-IK-3rK" kind="show" id="7QM-Gq-LCG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j5I-Jy-SZv"/>
@@ -210,6 +243,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qes-Z2-WEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="872.79999999999995" y="-9.8950524737631191"/>
+        </scene>
+        <!--CheckValuePopup-->
+        <scene sceneID="L6j-M8-Mem">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CheckValuePopup" id="wrd-IK-3rK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCk-le-oSi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="29"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ywQ-OD-vIb">
