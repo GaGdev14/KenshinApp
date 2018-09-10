@@ -22,6 +22,7 @@
 		EF508D2F213D1E7300073340 /* GohSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D2E213D1E7300073340 /* GohSelect.storyboard */; };
 		EF508D31213D2A2400073340 /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D30213D2A2400073340 /* Customer.storyboard */; };
 		EF508D35213D2B9200073340 /* ResultReport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D34213D2B9200073340 /* ResultReport.storyboard */; };
+		EF508D3921464FBE00073340 /* CustListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508D3821464FBE00073340 /* CustListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		EF508D2E213D1E7300073340 /* GohSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GohSelect.storyboard; sourceTree = "<group>"; };
 		EF508D30213D2A2400073340 /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
 		EF508D34213D2B9200073340 /* ResultReport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultReport.storyboard; sourceTree = "<group>"; };
+		EF508D3821464FBE00073340 /* CustListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		EF508CFB2136B02F00073340 /* KenshinApp */ = {
 			isa = PBXGroup;
 			children = (
+				EF508D3821464FBE00073340 /* CustListViewController.swift */,
 				EF508CFC2136B02F00073340 /* AppDelegate.swift */,
 				EF508CFE2136B02F00073340 /* ViewController.swift */,
 				EF508D002136B02F00073340 /* Main.storyboard */,
@@ -286,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72AF1BA421426C0A00264CDA /* Button_Custom.swift in Sources */,
+				EF508D3921464FBE00073340 /* CustListViewController.swift in Sources */,
 				EF508CFF2136B02F00073340 /* ViewController.swift in Sources */,
 				EF508D2D2136B66500073340 /* GasMenuViewController.swift in Sources */,
 				EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */,
