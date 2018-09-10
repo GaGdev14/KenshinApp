@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Check Value Popup-->
         <scene sceneID="asw-AA-LmO">
             <objects>
-                <viewController modalPresentationStyle="overCurrentContext" id="RcA-CE-PLa" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="overCurrentContext" id="RcA-CE-PLa" customClass="VCCheckValuePopup" customModule="KenshinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lTl-Xi-p2v">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -50,6 +50,9 @@
                                                 <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onTapCancel:" destination="RcA-CE-PLa" eventType="touchUpInside" id="xxv-VP-MYx"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pj-He-yey" customClass="Button_Custom" customModule="KenshinApp">
                                         <rect key="frame" x="170" y="189" width="119" height="53"/>
@@ -73,6 +76,9 @@
                                                 <color key="value" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="Vwn-78-Qwv" kind="show" id="UKk-rW-LMz"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今回：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qi-4I-RFj">
                                         <rect key="frame" x="64" y="73" width="52" height="21"/>
@@ -127,6 +133,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flS-zO-MD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-16.800000000000001" y="-5.8470764617691158"/>
+        </scene>
+        <!--ResultReport-->
+        <scene sceneID="3xr-dZ-cM0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ResultReport" id="Vwn-78-Qwv" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNS-aX-40C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="51"/>
         </scene>
     </scenes>
 </document>
