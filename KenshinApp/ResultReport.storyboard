@@ -137,6 +137,7 @@
                         <outlet property="containerA" destination="bej-ao-0vU" id="nev-dj-1Be"/>
                         <outlet property="containerB" destination="OWi-oV-o3l" id="z5g-1d-xFS"/>
                         <outlet property="containerView" destination="UxB-ha-v9a" id="j0c-Kz-gPj"/>
+                        <outlet property="customerName" destination="k3U-c9-d8R" id="dDj-Ob-54D"/>
                         <outlet property="gasMeterNumber" destination="O6x-Zd-FsQ" id="oYu-Xx-1f3"/>
                     </connections>
                 </viewController>

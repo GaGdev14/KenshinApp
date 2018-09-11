@@ -17,6 +17,7 @@ class VCResultReport: UIViewController {
     var containers: Array<UIView> = []
     
     @IBOutlet weak var gasMeterNumber: UILabel!
+    @IBOutlet weak var customerName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,7 @@ class VCResultReport: UIViewController {
         containerView.bringSubview(toFront: containerA)
         
         gasMeterNumber.text = "111-11111-111"
+        customerName.text = "山田　花子"
     }
     
     override func didReceiveMemoryWarning() {
