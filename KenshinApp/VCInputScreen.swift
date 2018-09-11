@@ -17,10 +17,17 @@ class VCInputScreen: UIViewController {
     @IBOutlet weak var lastMonthValue: UILabel!
     @IBOutlet weak var usedThisMonth: UILabel!
     @IBOutlet weak var usedLastYear: UILabel!
+    @IBOutlet weak var thisMonthValue: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //入力ボックスのデフォルト値（うっすら表示する文字）
+        thisMonthValue.placeholder = "入力してください"
+        
+        //入力値をリアルタイムで取得
+        
         
         //のちのちここで代入
         lastMonthValue.text = "1256"
