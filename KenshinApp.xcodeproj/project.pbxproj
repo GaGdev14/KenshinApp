@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7221BDF4214212570070320D /* VCResultReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221BDF3214212570070320D /* VCResultReport.swift */; };
+		727E8CBF214758B800BBA9D3 /* VCInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E8CBE214758B800BBA9D3 /* VCInputScreen.swift */; };
 		72AF1BA421426C0A00264CDA /* Button_Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF1BA321426C0A00264CDA /* Button_Custom.swift */; };
 		72AF1BA6214270E500264CDA /* CheckValuePopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF1BA5214270E500264CDA /* CheckValuePopup.storyboard */; };
 		72C98CF621462ECB00482551 /* VCCheckValuePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C98CF521462ECB00482551 /* VCCheckValuePopup.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		7221BDF3214212570070320D /* VCResultReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCResultReport.swift; sourceTree = "<group>"; };
+		727E8CBE214758B800BBA9D3 /* VCInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCInputScreen.swift; sourceTree = "<group>"; };
 		72AF1BA321426C0A00264CDA /* Button_Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button_Custom.swift; sourceTree = "<group>"; };
 		72AF1BA5214270E500264CDA /* CheckValuePopup.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CheckValuePopup.storyboard; sourceTree = "<group>"; };
 		72C98CF521462ECB00482551 /* VCCheckValuePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCheckValuePopup.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				EF508D30213D2A2400073340 /* Customer.storyboard */,
 				EF508D2E213D1E7300073340 /* GohSelect.storyboard */,
 				EF508D34213D2B9200073340 /* ResultReport.storyboard */,
+				727E8CBE214758B800BBA9D3 /* VCInputScreen.swift */,
 				72AF1BA5214270E500264CDA /* CheckValuePopup.storyboard */,
 				72C98CF521462ECB00482551 /* VCCheckValuePopup.swift */,
 				7221BDF3214212570070320D /* VCResultReport.swift */,
@@ -293,6 +296,7 @@
 				EF508D2D2136B66500073340 /* GasMenuViewController.swift in Sources */,
 				EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */,
 				72C98CF621462ECB00482551 /* VCCheckValuePopup.swift in Sources */,
+				727E8CBF214758B800BBA9D3 /* VCInputScreen.swift in Sources */,
 				7221BDF4214212570070320D /* VCResultReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
