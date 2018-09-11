@@ -16,10 +16,14 @@ class VCResultReport: UIViewController {
     @IBOutlet weak var containerB: UIView!
     var containers: Array<UIView> = []
     
+    @IBOutlet weak var gasMeterNumber: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         containers = [containerA,containerB]
         containerView.bringSubview(toFront: containerA)
+        
+        gasMeterNumber.text = "111-11111-111"
     }
     
     override func didReceiveMemoryWarning() {
