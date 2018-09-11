@@ -12,7 +12,7 @@
  
 import UIKit
 
-class VCInputScreen: UIViewController {
+class VCInputScreen: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var lastMonthValue: UILabel!
     @IBOutlet weak var usedThisMonth: UILabel!
@@ -26,12 +26,14 @@ class VCInputScreen: UIViewController {
         //入力ボックスのデフォルト値（うっすら表示する文字）
         thisMonthValue.placeholder = "入力してください"
         
-        //入力値をリアルタイムで取得
+        //数字のキーボードを表示する
+        self.thisMonthValue.keyboardType = UIKeyboardType.numberPad
         
+        //入力値をリアルタイムで取得
+        thisMonthValue.delegate = self
         
         //のちのちここで代入
         lastMonthValue.text = "1256"
-        usedThisMonth.text = "30"
         usedLastYear.text = "34"
         
     }
@@ -40,5 +42,17 @@ class VCInputScreen: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-
+    func textFieldShouldReturn(_ thisMonthValue: UITextField) -> Bool {
+        // returnが押されたキーボードを閉じる(ここでは無視してOKです)
+        thisMonthValue.resignFirstResponder()
+        
+        // テキストフィールドに入力された文字(textプロパティが保持)を定数textに代入
+        let text = thisMonthValue.text
+        
+        // 定数textをラベルのtextプロパティ(ラベルに表示される文字)に代入
+        usedThisMonth.text = text
+        
+        return true
+    }
 }
+
