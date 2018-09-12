@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,29 +19,115 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j1i-dx-WX1">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1i-dx-WX1">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="ログイン" id="No7-SO-KVo"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53v-t2-a30">
-                                <rect key="frame" x="156" y="556" width="62" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53v-t2-a30">
+                                <rect key="frame" x="116" y="521" width="157" height="39"/>
+                                <color key="backgroundColor" red="0.9112491904145078" green="0.9112491904145078" blue="0.9112491904145078" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="E8g-sL-B18"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="ログイン"/>
                                 <connections>
                                     <segue destination="xFK-W9-PSl" kind="presentation" identifier="GasMenuViewController" id="Ifk-rX-Qha"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="検針はこ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QKl-2Y-Ed0">
+                                <rect key="frame" x="44" y="158" width="159" height="84"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iav-na-MMy">
+                                <rect key="frame" x="106" y="231" width="76.5" height="41"/>
+                                <string key="text">System VI
+Ver.6.5.1</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本日もよろしくお願いします" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LL2-wD-cF9">
+                                <rect key="frame" x="81" y="316" width="226" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TokyoGasLogo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mqs-sr-d2i">
+                                <rect key="frame" x="126" y="145" width="285" height="163"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ID" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SqC-10-uAL">
+                                <rect key="frame" x="116" y="377" width="157" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PASSWORD" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WzN-0X-Ohp">
+                                <rect key="frame" x="116" y="423" width="157" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYg-c4-lpx">
+                                <rect key="frame" x="159" y="569" width="72" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="キャンセル"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PASSWORDの表示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoX-9c-2oA">
+                                <rect key="frame" x="124" y="461" width="121" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8H-cK-0ux">
+                                <rect key="frame" x="16" y="618" width="164" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="PASSWORDを忘れた方へ"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="WzN-0X-Ohp" firstAttribute="trailing" secondItem="53v-t2-a30" secondAttribute="trailing" id="0J6-VP-52a"/>
+                            <constraint firstItem="j1i-dx-WX1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1Ha-Lk-9Nx"/>
+                            <constraint firstItem="LL2-wD-cF9" firstAttribute="centerX" secondItem="SqC-10-uAL" secondAttribute="centerX" id="3le-TS-xtG"/>
+                            <constraint firstItem="JoX-9c-2oA" firstAttribute="top" secondItem="WzN-0X-Ohp" secondAttribute="bottom" constant="8" symbolic="YES" id="7NJ-Ib-MfJ"/>
+                            <constraint firstItem="53v-t2-a30" firstAttribute="centerX" secondItem="AYg-c4-lpx" secondAttribute="centerX" id="7dW-fr-HJs"/>
+                            <constraint firstItem="j1i-dx-WX1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7xB-Ha-Wls"/>
+                            <constraint firstItem="LL2-wD-cF9" firstAttribute="top" secondItem="Mqs-sr-d2i" secondAttribute="bottom" constant="8" symbolic="YES" id="8ai-J0-ky8"/>
+                            <constraint firstItem="WzN-0X-Ohp" firstAttribute="leading" secondItem="53v-t2-a30" secondAttribute="leading" id="8pl-Lz-0gr"/>
+                            <constraint firstItem="WzN-0X-Ohp" firstAttribute="top" secondItem="SqC-10-uAL" secondAttribute="bottom" constant="16" id="9rI-0N-zFD"/>
+                            <constraint firstItem="SqC-10-uAL" firstAttribute="leading" secondItem="WzN-0X-Ohp" secondAttribute="leading" id="DKH-cV-rUF"/>
+                            <constraint firstAttribute="bottom" secondItem="w8H-cK-0ux" secondAttribute="bottom" constant="20" symbolic="YES" id="DeV-2C-P1C"/>
+                            <constraint firstAttribute="trailing" secondItem="j1i-dx-WX1" secondAttribute="trailing" id="DfY-Sg-DoY"/>
+                            <constraint firstItem="SqC-10-uAL" firstAttribute="top" secondItem="LL2-wD-cF9" secondAttribute="bottom" constant="40" id="EvE-so-hzp"/>
+                            <constraint firstItem="iav-na-MMy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="106" id="JXo-cL-7gO"/>
+                            <constraint firstItem="LL2-wD-cF9" firstAttribute="top" secondItem="iav-na-MMy" secondAttribute="bottom" constant="44" id="MAN-VR-mGd"/>
+                            <constraint firstItem="QKl-2Y-Ed0" firstAttribute="top" secondItem="j1i-dx-WX1" secondAttribute="bottom" constant="94" id="N0X-Uu-kfi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QKl-2Y-Ed0" secondAttribute="trailing" constant="172" id="QkP-q8-cX4"/>
+                            <constraint firstItem="Mqs-sr-d2i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="126" id="Rci-Je-zea"/>
+                            <constraint firstItem="SqC-10-uAL" firstAttribute="trailing" secondItem="WzN-0X-Ohp" secondAttribute="trailing" id="Ut3-8f-hRn"/>
+                            <constraint firstItem="SqC-10-uAL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="116" id="VFn-ac-IWv"/>
+                            <constraint firstItem="w8H-cK-0ux" firstAttribute="top" secondItem="AYg-c4-lpx" secondAttribute="bottom" constant="20" id="WjE-Hf-s31"/>
+                            <constraint firstItem="LL2-wD-cF9" firstAttribute="top" secondItem="QKl-2Y-Ed0" secondAttribute="bottom" constant="74" id="XKL-KY-Bsd"/>
+                            <constraint firstItem="53v-t2-a30" firstAttribute="top" secondItem="JoX-9c-2oA" secondAttribute="bottom" constant="43" id="Ze4-Cy-spj"/>
+                            <constraint firstItem="JoX-9c-2oA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="124" id="fBz-GE-7KC"/>
+                            <constraint firstItem="LL2-wD-cF9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="81" id="nEF-69-Qbx"/>
+                            <constraint firstItem="AYg-c4-lpx" firstAttribute="top" secondItem="53v-t2-a30" secondAttribute="bottom" constant="9" id="nGw-4U-gv6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mqs-sr-d2i" secondAttribute="trailing" constant="-52" id="orK-dP-IbS"/>
+                            <constraint firstItem="QKl-2Y-Ed0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="uc7-iR-Yft"/>
+                            <constraint firstItem="w8H-cK-0ux" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zCu-KT-rkb"/>
+                            <constraint firstItem="Mqs-sr-d2i" firstAttribute="top" secondItem="j1i-dx-WX1" secondAttribute="bottom" constant="81" id="zpt-jA-lNX"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-52" y="138"/>
+            <point key="canvasLocation" x="-52" y="137.18140929535232"/>
         </scene>
         <!--GasMenu-->
         <scene sceneID="0Yr-bO-JxJ">
@@ -51,4 +138,7 @@
             <point key="canvasLocation" x="740" y="201"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="TokyoGasLogo" width="200" height="200"/>
+    </resources>
 </document>
