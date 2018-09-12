@@ -32,6 +32,7 @@ class NumberKeyBoard: UITextField{
     }
     
     @objc func closeButtonTapped(){
+        
         self.endEditing(true)
         self.resignFirstResponder()
     }
