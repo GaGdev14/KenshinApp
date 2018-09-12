@@ -137,16 +137,18 @@
                         <outlet property="containerA" destination="bej-ao-0vU" id="nev-dj-1Be"/>
                         <outlet property="containerB" destination="OWi-oV-o3l" id="z5g-1d-xFS"/>
                         <outlet property="containerView" destination="UxB-ha-v9a" id="j0c-Kz-gPj"/>
+                        <outlet property="customerName" destination="k3U-c9-d8R" id="dDj-Ob-54D"/>
+                        <outlet property="gasMeterNumber" destination="O6x-Zd-FsQ" id="oYu-Xx-1f3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Edq-YY-Xa2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="56.799999999999997" y="83.208395802098963"/>
         </scene>
-        <!--View Controller-->
+        <!--Input Screen-->
         <scene sceneID="7wr-wE-1yM">
             <objects>
-                <viewController id="m4d-gR-Hq2" sceneMemberID="viewController">
+                <viewController id="m4d-gR-Hq2" customClass="VCInputScreen" customModule="KenshinApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4gz-t3-cnr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="432"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -165,14 +167,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="前回：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDs-KF-VZn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今回：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDs-KF-VZn">
                                 <rect key="frame" x="59" y="213" width="52" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="{前回検針値}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sn7-6b-7ST">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="{今回使用量}" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sn7-6b-7ST">
                                 <rect key="frame" x="140" y="213" width="99" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -200,8 +202,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-7x-hbJ">
-                                <rect key="frame" x="140" y="45" width="117" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GjM-7x-hbJ" customClass="NumberKeyBoard" customModule="KenshinApp" customModuleProvider="target">
+                                <rect key="frame" x="140" y="45" width="178" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -239,6 +241,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j5I-Jy-SZv"/>
                     </view>
+                    <connections>
+                        <outlet property="lastMonthValue" destination="apO-gs-dWR" id="Z6V-3m-YL8"/>
+                        <outlet property="thisMonthValue" destination="GjM-7x-hbJ" id="Dad-YH-AnL"/>
+                        <outlet property="usedLastYear" destination="RQc-b8-vWc" id="w1a-ji-LgU"/>
+                        <outlet property="usedThisMonth" destination="sn7-6b-7ST" id="cn5-t4-V3D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qes-Z2-WEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
