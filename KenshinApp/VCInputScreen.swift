@@ -43,26 +43,14 @@ class VCInputScreen: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // テキストフィールドに入力された文字(textプロパティが保持)を定数textに代入
+        let text = thisMonthValue.text
+        
+        // 定数textをラベルのtextプロパティ(ラベルに表示される文字)に代入
+        usedThisMonth.text = text
         print("変更中")
-        // テキストフィールドに入力された文字(textプロパティが保持)を定数textに代入
-        let text = thisMonthValue.text
-        
-        // 定数textをラベルのtextプロパティ(ラベルに表示される文字)に代入
-        usedThisMonth.text = text
         return true
     }
-    
-    private func textFieldDidEndEditing(_ thisMonthValue: UITextField) -> Bool {
-        // returnが押されたキーボードを閉じる(ここでは無視してOKです)
-        thisMonthValue.resignFirstResponder()
-        
-        // テキストフィールドに入力された文字(textプロパティが保持)を定数textに代入
-        let text = thisMonthValue.text
-        
-        // 定数textをラベルのtextプロパティ(ラベルに表示される文字)に代入
-        usedThisMonth.text = text
-        
-        return true
-    }
+
 }
 
