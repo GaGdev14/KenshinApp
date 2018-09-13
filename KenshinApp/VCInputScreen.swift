@@ -46,10 +46,20 @@ class VCInputScreen: UIViewController, UITextFieldDelegate {
         // テキストフィールドに入力された文字(textプロパティが保持)を定数textに代入
         let text = thisMonthValue.text
         
+        //今月の使用量計算
+        calculateUsage(usage: String(format:"%@%@",text!,string))
+        
         // 定数textをラベルのtextプロパティ(ラベルに表示される文字)に代入
-        usedThisMonth.text = text
-        print("変更中")
-        return true
+        //なぜか最後の一文字が入らないので、stingで取得する入力文字を繫げることで解決
+        usedThisMonth.text = text! + string
+                return true
+    }
+    
+    func calculateUsage(usage: String) -> String {
+        var usedThisMonth: String = ""
+        
+        //usedThisMonth = lastMonthValue - thisMonthValue
+        return usedThisMonth
     }
 
 }
