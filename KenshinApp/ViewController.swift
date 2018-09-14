@@ -8,17 +8,57 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController ,UITextFieldDelegate {
 
+    var textfieldID:UITextField!
+    var textfieldPASS:UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        //UITextFieldのインスタンスを作成
+        textfieldID = UITextField()
+        textfieldPASS = UITextField()
+        
+        //textfieldの位置とサイズを設定
+        textfieldID.frame = CGRect(x: self.view.frame.width / 2 - 100, y: self.view.frame.height / 2 - 10, width: 200, height: 30)
+        
+        textfieldPASS.frame = CGRect(x: self.view.frame.width / 2 - 100, y: self.view.frame.height / 2 + 35, width: 200, height: 30)
+        
+        //Delegateを自身に設定
+        textfieldID.delegate = self
+        textfieldPASS.delegate = self
+
+        //アウトラインを表示
+        textfieldID.borderStyle = .roundedRect
+        textfieldPASS.borderStyle = .roundedRect
+        
+        //入力している文字を全消しするclearボタンを設定(書いている時のみの設定)
+        textfieldID.clearButtonMode = .whileEditing
+        textfieldPASS.clearButtonMode = .whileEditing
+        
+        //改行ボタンを完了ボタンに変更
+        textfieldID.returnKeyType = .done
+        textfieldPASS.returnKeyType = .done
+
+        //文字が何も入力されていない時に表示される文字(薄っすら見える文字)
+        textfieldID.placeholder = "IDを入力"
+        textfieldPASS.placeholder = "PASSWORDを入力"
+        
+        //viewにtextfieldをsubviewとして追加
+        self.view.addSubview(textfieldID)        // Do any additional setup after loading the view, typically from a nib.
+        self.view.addSubview(textfieldPASS)
+        
     }
 
+    
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    //ttttttt
 }
 
