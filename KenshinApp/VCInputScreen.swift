@@ -19,7 +19,6 @@ class VCInputScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usedLastYear: UILabel!
     @IBOutlet weak var thisMonthValue: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,12 +44,23 @@ class VCInputScreen: UIViewController, UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         // テキストフィールドに入力された文字(textプロパティが保持)を定数textに代入
         let text = thisMonthValue.text
+        //let textInt = Int(text!)
+        
+        //今月の使用量計算
+        //calculateUsage(usageValue: textInt!)
         
         // 定数textをラベルのtextプロパティ(ラベルに表示される文字)に代入
-        usedThisMonth.text = text
-        print("変更中")
-        return true
+        //なぜか最後の一文字が入らないので、stingで取得する入力文字を繫げることで解決
+        usedThisMonth.text = text! + string
+                return true
     }
+    
+    /*
+    func calculateUsage(usageValue: Int) -> String {
+        let usedThisMonth: String = ""
+        
+        //usedThisMonth = lastMonthValue - thisMonthValue
+        return usedThisMonth
+ }*/
 
 }
-
