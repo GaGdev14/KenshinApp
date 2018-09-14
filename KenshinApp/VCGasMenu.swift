@@ -1,14 +1,14 @@
 //
-//  GasMenuViewController.swift
+//  VCGasMenu.swift
 //  KenshinApp
 //
-//  Created by 1490402 on 2018/08/29.
+//  Created by 1490402 on 2018/09/13.
 //  Copyright © 2018年 GaGdev14. All rights reserved.
 //
 
 import UIKit
 
-class GasMenuViewController: UIViewController {
+class VCGasMenu: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
