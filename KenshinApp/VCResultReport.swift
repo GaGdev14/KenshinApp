@@ -16,10 +16,16 @@ class VCResultReport: UIViewController {
     @IBOutlet weak var containerB: UIView!
     var containers: Array<UIView> = []
     
+    @IBOutlet weak var gasMeterNumber: UILabel!
+    @IBOutlet weak var customerName: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         containers = [containerA,containerB]
         containerView.bringSubview(toFront: containerA)
+        
+        gasMeterNumber.text = "111-11111-111"
+        customerName.text = "山田　花子"
     }
     
     override func didReceiveMemoryWarning() {
@@ -30,5 +36,7 @@ class VCResultReport: UIViewController {
         let currentContainerView = containers[sender.selectedSegmentIndex]
         containerView.bringSubview(toFront: currentContainerView)
     }
+    
+
     
 }
