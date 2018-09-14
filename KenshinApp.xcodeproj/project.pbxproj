@@ -21,10 +21,12 @@
 		EF508D122136B03000073340 /* KenshinAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508D112136B03000073340 /* KenshinAppTests.swift */; };
 		EF508D1D2136B03000073340 /* KenshinAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508D1C2136B03000073340 /* KenshinAppUITests.swift */; };
 		EF508D2B2136B2D600073340 /* GasMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D2A2136B2D600073340 /* GasMenu.storyboard */; };
-		EF508D2D2136B66500073340 /* GasMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508D2C2136B66500073340 /* GasMenuViewController.swift */; };
 		EF508D2F213D1E7300073340 /* GohSelect.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D2E213D1E7300073340 /* GohSelect.storyboard */; };
 		EF508D31213D2A2400073340 /* Customer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D30213D2A2400073340 /* Customer.storyboard */; };
 		EF508D35213D2B9200073340 /* ResultReport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D34213D2B9200073340 /* ResultReport.storyboard */; };
+		EFB54A3F214A6872006BC075 /* CircleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB54A3E214A6872006BC075 /* CircleButton.swift */; };
+		EFB54A41214A7925006BC075 /* VCGasMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB54A40214A7925006BC075 /* VCGasMenu.swift */; };
+		EFB54A43214B850B006BC075 /* VCGohSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB54A42214B850B006BC075 /* VCGohSelect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +67,12 @@
 		EF508D1C2136B03000073340 /* KenshinAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KenshinAppUITests.swift; sourceTree = "<group>"; };
 		EF508D1E2136B03000073340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF508D2A2136B2D600073340 /* GasMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GasMenu.storyboard; sourceTree = "<group>"; };
-		EF508D2C2136B66500073340 /* GasMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasMenuViewController.swift; sourceTree = "<group>"; };
 		EF508D2E213D1E7300073340 /* GohSelect.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GohSelect.storyboard; sourceTree = "<group>"; };
 		EF508D30213D2A2400073340 /* Customer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Customer.storyboard; sourceTree = "<group>"; };
 		EF508D34213D2B9200073340 /* ResultReport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResultReport.storyboard; sourceTree = "<group>"; };
+		EFB54A3E214A6872006BC075 /* CircleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButton.swift; sourceTree = "<group>"; };
+		EFB54A40214A7925006BC075 /* VCGasMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCGasMenu.swift; sourceTree = "<group>"; };
+		EFB54A42214B850B006BC075 /* VCGohSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCGohSelect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +139,9 @@
 				EF508D032136B02F00073340 /* Assets.xcassets */,
 				EF508D052136B02F00073340 /* LaunchScreen.storyboard */,
 				EF508D082136B02F00073340 /* Info.plist */,
-				EF508D2C2136B66500073340 /* GasMenuViewController.swift */,
+				EFB54A3E214A6872006BC075 /* CircleButton.swift */,
+				EFB54A40214A7925006BC075 /* VCGasMenu.swift */,
+				EFB54A42214B850B006BC075 /* VCGohSelect.swift */,
 			);
 			path = KenshinApp;
 			sourceTree = "<group>";
@@ -297,11 +303,13 @@
 				72AF1BA421426C0A00264CDA /* Button_Custom.swift in Sources */,
 				727E8CC12147B48400BBA9D3 /* NumberKeyBoard.swift in Sources */,
 				EF508CFF2136B02F00073340 /* ViewController.swift in Sources */,
-				EF508D2D2136B66500073340 /* GasMenuViewController.swift in Sources */,
+				EFB54A3F214A6872006BC075 /* CircleButton.swift in Sources */,
 				EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */,
 				72C98CF621462ECB00482551 /* VCCheckValuePopup.swift in Sources */,
 				727E8CBF214758B800BBA9D3 /* VCInputScreen.swift in Sources */,
 				7221BDF4214212570070320D /* VCResultReport.swift in Sources */,
+				EFB54A41214A7925006BC075 /* VCGasMenu.swift in Sources */,
+				EFB54A43214B850B006BC075 /* VCGohSelect.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
