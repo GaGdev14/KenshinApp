@@ -42,9 +42,13 @@ class VCInputScreen: UIViewController, UITextFieldDelegate {
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        // 今月の使用量を計算する
+        calculateUsage()
+        
         // テキストフィールドに入力された文字(textプロパティが保持)を定数textに代入
         let text = thisMonthValue.text
-        //let textInt = Int(text!)
+        
         
         //今月の使用量計算
         //calculateUsage(usageValue: textInt!)
@@ -55,12 +59,14 @@ class VCInputScreen: UIViewController, UITextFieldDelegate {
                 return true
     }
     
-    /*
-    func calculateUsage(usageValue: Int) -> String {
-        let usedThisMonth: String = ""
+    func calculateUsage() {
         
-        //usedThisMonth = lastMonthValue - thisMonthValue
-        return usedThisMonth
- }*/
+        let thisMonth = thisMonthValue.text
+        let lastMonth = lastMonthValue.text
+        
+        //let usage = lastMonth.toInt() - thisMonth.toInt()
+        //usedThisMonth.text =
+        
+ }
 
 }
