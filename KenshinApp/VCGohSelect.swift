@@ -10,9 +10,22 @@ import UIKit
 
 class VCGohSelect: UIViewController {
 
+    @IBOutlet var Gohdetails: UILabel!
+    @IBOutlet var KenshinStatus1: UILabel!
+    @IBOutlet var KenshinStatus2: UILabel!
+    @IBOutlet var KenshinStatus3: UILabel!
+    @IBOutlet var KenshinStatus4: UILabel!
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Gohdetails.text = "目黒区下目黒"
+        KenshinStatus1.text = "訪問　３０件"
+        KenshinStatus2.text = "配布　２件"
+        KenshinStatus3.text = "自動　２件"
+        KenshinStatus4.text = "無線　３件"
+        
         // Do any additional setup after loading the view.
     }
 
