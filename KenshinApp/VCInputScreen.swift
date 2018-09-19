@@ -19,6 +19,11 @@ class VCInputScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var usedLastYear: UILabel!
     @IBOutlet weak var thisMonthValue: UITextField!
     
+    var lastMonthValueStr: String = ""
+    var usedThisMonthStr: String = ""
+    var usedLastYearStr: String = ""
+    var thisMonthValueStr: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,8 +37,10 @@ class VCInputScreen: UIViewController, UITextFieldDelegate {
         thisMonthValue.delegate = self
         
         //のちのちここで代入
-        lastMonthValue.text = "1256"
-        usedLastYear.text = "34"
+        lastMonthValueStr = "1256"
+        lastMonthValue.text = lastMonthValueStr
+        usedLastYearStr = "34"
+        usedLastYear.text = usedLastYearStr
         
     }
     
@@ -43,30 +50,38 @@ class VCInputScreen: UIViewController, UITextFieldDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        // 今月の使用量を計算する
-        calculateUsage()
-        
         // テキストフィールドに入力された文字(textプロパティが保持)を定数textに代入
-        let text = thisMonthValue.text
+        var text: String = thisMonthValue.text!
         
+        text = text + string
+        // 今月の使用量を計算する
+        calculateUsage(text: text)
+       
         
-        //今月の使用量計算
-        //calculateUsage(usageValue: textInt!)
-        
+        /*
         // 定数textをラベルのtextプロパティ(ラベルに表示される文字)に代入
         //なぜか最後の一文字が入らないので、stingで取得する入力文字を繫げることで解決
         usedThisMonth.text = text! + string
+ */
                 return true
     }
     
-    func calculateUsage() {
+    func calculateUsage(text: String){
         
-        let thisMonth = thisMonthValue.text
-        let lastMonth = lastMonthValue.text
+        var thisMonth: Int = 0
+        var lastMonth: Int = 0
+        thisMonthValueStr = text
+        print(thisMonthValueStr)
         
-        //let usage = lastMonth.toInt() - thisMonth.toInt()
-        //usedThisMonth.text =
+        thisMonth = Int(thisMonthValueStr)!
+        lastMonth = Int(lastMonthValueStr)!
+        print(thisMonth)
         
- }
+        let gasUsage: Int = thisMonth - lastMonth
+        print(gasUsage)
+        
+        usedThisMonth.text = String(gasUsage)
+        
+    }
 
 }
