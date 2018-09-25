@@ -25,10 +25,5 @@ class Button_Custom: UIButton {
         }
     }
     
-    /* @IBInspectable var borderColor: UIColor = UIColor.clearColor() {
-     didSet {
-     layer.borderColor = borderColor.CGColor
-     }
-     
-     } */
-}
+    
+    }
