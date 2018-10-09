@@ -8,6 +8,11 @@
 
 /*
      検針値入力画面：ResultReportの入力用タブ設定用クラス
+ 
+    やることリスト
+    ・音声入力後、削除ボタンを押しても落ちないようにする
+    ・今月の検針値がマイナスの場合はエラーを表示する（できればブルブル）
+ 
 */
  
 import UIKit
@@ -234,7 +239,8 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
             calculateUsage(text: text)
         } else{
             print("数字を入力してください")
-            self.warningStatement.text = "※音声入力再挑戦求む！"
+            thisMonthValue.text = ""
+            warningStatement.text = "※音声入力再挑戦求む！"
         }
     }
 }

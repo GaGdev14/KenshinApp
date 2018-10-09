@@ -10,6 +10,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Customer-->
+        <scene sceneID="8zS-xQ-V1c">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Customer" id="EnP-oF-MKl" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iPi-JF-NPT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-515" y="-168"/>
+        </scene>
         <!--Result Report-->
         <scene sceneID="WKs-JJ-OtA">
             <objects>
@@ -22,7 +30,11 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="検針結果入力" id="ipI-8o-LWB">
-                                        <barButtonItem key="leftBarButtonItem" title="お客さま" id="tb3-1L-Fmg"/>
+                                        <barButtonItem key="leftBarButtonItem" title="お客さま" id="tb3-1L-Fmg">
+                                            <connections>
+                                                <segue destination="EnP-oF-MKl" kind="show" id="Z7D-1d-SCk"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
