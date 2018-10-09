@@ -237,20 +237,12 @@
                                     <segue destination="wrd-IK-3rK" kind="show" id="7QM-Gq-LCG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="結果表示（仮）" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAg-P8-xeL">
-                                <rect key="frame" x="242" y="92" width="122" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="j5I-Jy-SZv"/>
                     </view>
                     <connections>
                         <outlet property="lastMonthValue" destination="apO-gs-dWR" id="Z6V-3m-YL8"/>
-                        <outlet property="massageResult" destination="vAg-P8-xeL" id="fWW-Zt-Smw"/>
                         <outlet property="thisMonthValue" destination="GjM-7x-hbJ" id="Dad-YH-AnL"/>
                         <outlet property="usedLastYear" destination="RQc-b8-vWc" id="w1a-ji-LgU"/>
                         <outlet property="usedThisMonth" destination="sn7-6b-7ST" id="cn5-t4-V3D"/>

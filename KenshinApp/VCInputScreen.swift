@@ -35,8 +35,6 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
     //録音の開始、停止ボタン
     var recordButton : UIButton!
     
-    @IBOutlet weak var massageResult: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -104,7 +102,7 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         
         text = text + string
         // 今月の使用量を計算する
-        calculateUsage(text: text)
+        calculateUsage(text: Int(text)!)
        
         
         /*
@@ -115,14 +113,13 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
                 return true
     }
     
-    func calculateUsage(text: String){
+    public func calculateUsage(text: Int){
         
-        var thisMonth: Int = 0
+        // var thisMonth: Int = 0
+        var thisMonth: Int = text
         var lastMonth: Int = 0
-        thisMonthValueStr = text
-        print(thisMonthValueStr)
         
-        thisMonth = Int(thisMonthValueStr)!
+        //thisMonth = Int(text)! //音声入力結果を削除すると、ここでエラーになる
         lastMonth = Int(lastMonthValueStr)!
         print(thisMonth)
         
@@ -144,7 +141,7 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
             print("録音停止")
         } else {
             // 録音を開始する
-            massageResult.text = ""
+            // massageResult.text = ""
             print("２：録音開始")
             try! startRecording()
             recordButton.setTitle("音声入力終了", for: [])
@@ -176,11 +173,17 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         // 取り消すことができるようにタスクへの参照を保持
         recognitionTask = speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
             var isFinal = false
+            var voiceMessage: String = ""
             if let result = result {
                 //音声認識の区切りの良いところで実行される。
                 print("４：録音完了")
                 print(result.bestTranscription.formattedString)
-                self.massageResult.text = result.bestTranscription.formattedString
+                voiceMessage = result.bestTranscription.formattedString
+                self.thisMonthValue.text = voiceMessage
+                
+                // 入力文字をInt型に変換する
+                self.changeIntVoiceMassage(voiceMessage: result.bestTranscription.formattedString)
+                
                 isFinal = result.isFinal
             }
             if error != nil || isFinal {
@@ -201,7 +204,6 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         try audioEngine.start()
     }
     
-    
     // MARK: SFSpeechRecognizerDelegate
     //speechRecognizerが使用可能かどうかでボタンのisEnabledを変更する
     public func speechRecognizer(_ speechRecognizer: SFSpeechRecognizer, availabilityDidChange available: Bool) {
@@ -213,5 +215,32 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
             recordButton.setTitle("Recognition not available", for: .disabled)
         }
     }
-
+    
+    public func changeIntVoiceMassage(voiceMessage: String){
+        
+        let array = voiceMessage.components(separatedBy: ",")
+        let afterVoiceMessage = array.joined()
+        print(afterVoiceMessage)
+        
+        //入力値チェック
+        let checkInt: Bool = afterVoiceMessage.isOnly(structuredBy: "0123456789")
+        if(checkInt == true) {
+            let text: Int = Int(afterVoiceMessage)!
+            print(text)
+            //この後、計算メソッドを呼べばいけるはず
+            calculateUsage(text: text)
+        } else{
+            print("数字を入力してください")
+        }
+    }
 }
+
+extension String {
+    public func isOnly(structuredBy chars: String) -> Bool {
+        let characterSet = NSMutableCharacterSet()
+        characterSet.addCharacters(in: chars)
+        //return self.stringByTrimmingCharactersInSet(characterSet).length <= 0
+        return self.trimmingCharacters(in: characterSet as CharacterSet).count <= 0
+    }
+}
+
