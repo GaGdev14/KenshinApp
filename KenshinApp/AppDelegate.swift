@@ -7,15 +7,26 @@
 //
 
 import UIKit
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        //既存のファイルとデータ構造が異なるときには自動的にファイルを消して、新しいスキーマで作り直す
+        let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+
+        
+        // Tell Realm to use this new configuration object for the default Realm
+        Realm.Configuration.defaultConfiguration = config
+        
+        //デフォルトのレルムに対してこの新しい設定オブジェクトを使用するようにRealmに指示します
+        let realm = try! Realm()
+        print(realm, "Realm")
+        print(config,"Realm Version")
         return true
     }
 

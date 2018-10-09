@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class ViewController: UIViewController ,UITextFieldDelegate {
 
@@ -15,6 +16,15 @@ class ViewController: UIViewController ,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //保存先の出力
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+        
+        let dataM = DataManager()
+        let csvArray = dataM.csvLoad(filename: "Sample")
+        for csvStr in csvArray {
+            dataM.saveCsvValue(csvStr: csvStr)
+        }
         
         //UITextFieldのインスタンスを作成
         textfieldID = UITextField()
@@ -51,10 +61,6 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         
     }
 
-    
-    
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

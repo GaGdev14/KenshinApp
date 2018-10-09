@@ -54,9 +54,6 @@ class VCCustomer:UIViewController, UITableViewDelegate, UITableViewDataSource {
         let imageView = cell.viewWithTag(2) as! UIImageView
         imageView.image = img
         
-
-        
-        
         return cell
     }
     // Cell の高さを１２０にする
