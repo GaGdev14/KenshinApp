@@ -13,7 +13,6 @@
 		72AF1BA421426C0A00264CDA /* Button_Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72AF1BA321426C0A00264CDA /* Button_Custom.swift */; };
 		72AF1BA6214270E500264CDA /* CheckValuePopup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72AF1BA5214270E500264CDA /* CheckValuePopup.storyboard */; };
 		72C98CF621462ECB00482551 /* VCCheckValuePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C98CF521462ECB00482551 /* VCCheckValuePopup.swift */; };
-		8F0046D54FE995FE97612E8F /* Pods_KenshinApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06606ED1662C0C1D479398BC /* Pods_KenshinApp.framework */; };
 		9AB6182D0FE356248AC13F8A /* Pods_KenshinAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32A1A9C5394A9D3667081F55 /* Pods_KenshinAppUITests.framework */; };
 		D9F5F16F47CAE8D15C31A774 /* Pods_KenshinAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83EBD86C500DC2F890461FC7 /* Pods_KenshinAppTests.framework */; };
 		EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFC2136B02F00073340 /* AppDelegate.swift */; };
@@ -94,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F0046D54FE995FE97612E8F /* Pods_KenshinApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,15 +345,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-KenshinApp-checkManifestLockResult.txt",
 			);
@@ -369,15 +363,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-KenshinAppTests-checkManifestLockResult.txt",
 			);
@@ -391,15 +381,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-KenshinAppUITests-checkManifestLockResult.txt",
 			);
@@ -600,8 +586,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2NZ32G75QC;
 				INFOPLIST_FILE = KenshinApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,7 +596,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.KenshinApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -619,8 +606,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 2NZ32G75QC;
 				INFOPLIST_FILE = KenshinApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -628,7 +616,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.dev.KenshinApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
