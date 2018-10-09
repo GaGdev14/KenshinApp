@@ -20,6 +20,7 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
     @IBOutlet weak var usedThisMonth: UILabel!
     @IBOutlet weak var usedLastYear: UILabel!
     @IBOutlet weak var thisMonthValue: UITextField!
+    @IBOutlet weak var warningStatement: UILabel!
     
     var lastMonthValueStr: String = ""
     var usedThisMonthStr: String = ""
@@ -218,6 +219,7 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
     
     public func changeIntVoiceMassage(voiceMessage: String){
         
+        
         let array = voiceMessage.components(separatedBy: ",")
         let afterVoiceMessage = array.joined()
         print(afterVoiceMessage)
@@ -227,10 +229,12 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         if(checkInt == true) {
             let text: Int = Int(afterVoiceMessage)!
             print(text)
+            self.warningStatement.text = ""
             //この後、計算メソッドを呼べばいけるはず
             calculateUsage(text: text)
         } else{
             print("数字を入力してください")
+            self.warningStatement.text = "※音声入力再挑戦求む！"
         }
     }
 }
