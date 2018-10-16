@@ -36,6 +36,11 @@
                                                 <segue destination="ec7-vw-FxN" kind="show" id="39W-3j-8UT"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="ハンバーガーメニュー" id="PJe-0d-YK9">
+                                            <connections>
+                                                <segue destination="4Dg-5C-OBO" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="0w4-jN-HD1"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -75,7 +80,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="qjt-K1-AFx" kind="show" id="Lfp-qZ-IpW"/>
+                                    <segue destination="qjt-K1-AFx" kind="show" identifier="ToCustmer" id="Lfp-qZ-IpW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkS-F8-35t">
@@ -116,6 +121,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4V-af-61s">
+                                <rect key="frame" x="140" y="144" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Z5Z-1q-HTy" id="Pfo-4v-Smi"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Utz-Jp-sfc"/>
@@ -126,6 +141,7 @@
                         <outlet property="KenshinStatus2" destination="jIW-KL-NmS" id="0Sy-I5-Ic1"/>
                         <outlet property="KenshinStatus3" destination="4ka-rr-VNW" id="rfT-ea-g9p"/>
                         <outlet property="KenshinStatus4" destination="TzK-4n-fXI" id="GnC-CS-KmZ"/>
+                        <outlet property="SelectGohNo" destination="r4V-af-61s" id="01I-qU-caC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4g-82-olE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -138,10 +154,142 @@
                 <viewControllerPlaceholder storyboardName="Customer" id="qjt-K1-AFx" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PdS-Jk-kRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="705" y="165"/>
+            <point key="canvasLocation" x="666" y="-136"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="nIV-SC-Rjv">
+            <objects>
+                <viewController modalPresentationStyle="overCurrentContext" id="4Dg-5C-OBO" customClass="MenuViewController" customModule="KenshinApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="K6p-vK-EXj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8JI-iQ-En3">
+                                <rect key="frame" x="207" y="0.0" width="168" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLM-uU-Icd" customClass="Button_Custom" customModule="KenshinApp">
+                                        <rect key="frame" x="8" y="28" width="152" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="手書印刷">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="zjo-8f-2gw" kind="show" id="h7o-7g-yLD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVE-uf-uhv" customClass="Button_Custom" customModule="KenshinApp">
+                                        <rect key="frame" x="8" y="87" width="152" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="環境設定">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="ePq-km-Wfc" kind="show" id="RoU-0L-WiQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txX-mF-Jwk" customClass="Button_Custom" customModule="KenshinApp">
+                                        <rect key="frame" x="8" y="146" width="152" height="51"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="業務終了">
+                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="uBe-HO-rKw" kind="show" id="rH0-Z4-yfs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="fjH-yu-GQI"/>
+                                    <constraint firstAttribute="height" constant="667" id="swC-4W-Ty1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8JI-iQ-En3" firstAttribute="bottom" secondItem="xRg-eU-lN3" secondAttribute="bottom" id="1zd-2a-IUI"/>
+                            <constraint firstItem="8JI-iQ-En3" firstAttribute="trailing" secondItem="xRg-eU-lN3" secondAttribute="trailing" id="AMX-m4-BYT"/>
+                            <constraint firstItem="8JI-iQ-En3" firstAttribute="top" secondItem="K6p-vK-EXj" secondAttribute="top" id="R6I-E6-M1h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xRg-eU-lN3"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuView" destination="8JI-iQ-En3" id="bAa-MJ-ZwI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAG-p7-jDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="191"/>
+        </scene>
+        <!--HandPrint-->
+        <scene sceneID="CWK-cC-oe7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HandPrint" id="zjo-8f-2gw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQ9-oM-2t7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1806" y="-96"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="cpp-aa-Onl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Setting" id="ePq-km-Wfc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FMU-Zp-usU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803" y="3"/>
+        </scene>
+        <!--Main-->
+        <scene sceneID="JBn-7a-ySp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" id="uBe-HO-rKw" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKX-dZ-qXg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1798" y="88"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow" width="256" height="256"/>
+        <image name="ハンバーガーメニュー" width="16" height="16"/>
     </resources>
 </document>

@@ -6,7 +6,7 @@ target 'KenshinApp' do
   use_frameworks!
 
   # Pods for KenshinApp
-
+  pod 'RealmSwift'
   target 'KenshinAppTests' do
     inherit! :search_paths
     # Pods for testing
