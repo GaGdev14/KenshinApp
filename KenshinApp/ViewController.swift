@@ -17,6 +17,17 @@ class ViewController: UIViewController ,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 色の定義
+        // 背景：白
+        view.backgroundColor = UIColor(hex: "FFFFFF", alpha: 0.7)
+        
+        //ナビゲーションアイテムの色を変更
+        UINavigationBar.appearance().tintColor = UIColor(hex: "E59292")
+        //ナビゲーションバーの背景を変更
+        UINavigationBar.appearance().barTintColor = UIColor(hex: "3F2D2D")
+        //ナビゲーションのタイトル文字列の色を変更
+        // self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        UINavigationBar.appearance().barStyle = UIBarStyle.black
         //保存先の出力
         print(Realm.Configuration.defaultConfiguration.fileURL)
         
