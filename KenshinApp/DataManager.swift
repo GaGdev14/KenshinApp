@@ -41,9 +41,13 @@ class DataManager: Object {
         let data = DataModel()
         // CSVなのでカンマでセパレート
         let splitStr = csvStr.components(separatedBy: ",")
-        data.name = splitStr[0]
-        data.goh = splitStr[1]
-        data.syaban = Int(splitStr[2])!
+        data.gmtSetNo = Int(splitStr[0])!
+        data.name = splitStr[1]
+        data.goh = splitStr[2]
+        data.syaban = Int(splitStr[3])!
+        data.gohDetail = splitStr[4]
+        data.jusho = splitStr[5]
+        
         // 保存
         let realm = try! Realm()
         do {
@@ -51,6 +55,7 @@ class DataManager: Object {
             realm.add(data)
             }
         } catch {
+            print("エラー")
         }
     }
 }

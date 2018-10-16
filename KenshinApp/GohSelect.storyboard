@@ -80,7 +80,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="qjt-K1-AFx" kind="show" id="Lfp-qZ-IpW"/>
+                                    <segue destination="qjt-K1-AFx" kind="show" identifier="ToCustmer" id="Lfp-qZ-IpW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkS-F8-35t">
@@ -121,13 +121,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rYG-gH-wSW">
-                                <rect key="frame" x="109" y="117" width="42" height="21"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r4V-af-61s">
+                                <rect key="frame" x="140" y="144" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Z5Z-1q-HTy" id="Pfo-4v-Smi"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Utz-Jp-sfc"/>
@@ -138,7 +141,7 @@
                         <outlet property="KenshinStatus2" destination="jIW-KL-NmS" id="0Sy-I5-Ic1"/>
                         <outlet property="KenshinStatus3" destination="4ka-rr-VNW" id="rfT-ea-g9p"/>
                         <outlet property="KenshinStatus4" destination="TzK-4n-fXI" id="GnC-CS-KmZ"/>
-                        <outlet property="testLavel" destination="rYG-gH-wSW" id="1wz-R4-FTp"/>
+                        <outlet property="SelectGohNo" destination="r4V-af-61s" id="01I-qU-caC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v4g-82-olE" userLabel="First Responder" sceneMemberID="firstResponder"/>

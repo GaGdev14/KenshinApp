@@ -23,7 +23,6 @@
 		EF44204E215A19E100E6D0AC /* VCSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF44204D215A19E100E6D0AC /* VCSetting.swift */; };
 		EF442051215A575C00E6D0AC /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF442050215A575C00E6D0AC /* DataModel.swift */; };
 		EF442053215B100C00E6D0AC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF442052215B100B00E6D0AC /* DataManager.swift */; };
-		EF442056216C96D500E6D0AC /* Sample.csv in Resources */ = {isa = PBXBuildFile; fileRef = EF4420542161BD6200E6D0AC /* Sample.csv */; };
 		EF508CFD2136B02F00073340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFC2136B02F00073340 /* AppDelegate.swift */; };
 		EF508CFF2136B02F00073340 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF508CFE2136B02F00073340 /* ViewController.swift */; };
 		EF508D022136B02F00073340 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF508D002136B02F00073340 /* Main.storyboard */; };
@@ -39,6 +38,9 @@
 		EFB54A41214A7925006BC075 /* VCGasMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB54A40214A7925006BC075 /* VCGasMenu.swift */; };
 		EFB54A43214B850B006BC075 /* VCGohSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB54A42214B850B006BC075 /* VCGohSelect.swift */; };
 		EFDF94BC214FB11B003AF3B4 /* VCCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDF94BB214FB11B003AF3B4 /* VCCustomer.swift */; };
+		EFE3448C217073920034D8AF /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE3448B217073920034D8AF /* Realm.framework */; };
+		EFE3448E217077410034D8AF /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE3448D217077410034D8AF /* RealmSwift.framework */; };
+		EFE3449121707A3E0034D8AF /* Sample.csv in Resources */ = {isa = PBXBuildFile; fileRef = EFE3449021707A3E0034D8AF /* Sample.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,7 +83,6 @@
 		EF44204D215A19E100E6D0AC /* VCSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCSetting.swift; sourceTree = "<group>"; };
 		EF442050215A575C00E6D0AC /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		EF442052215B100B00E6D0AC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
-		EF4420542161BD6200E6D0AC /* Sample.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file; name = Sample.csv; path = ../Sample.csv; sourceTree = "<group>"; };
 		EF508CF92136B02F00073340 /* KenshinApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KenshinApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF508CFC2136B02F00073340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF508CFE2136B02F00073340 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +104,9 @@
 		EFB54A40214A7925006BC075 /* VCGasMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCGasMenu.swift; sourceTree = "<group>"; };
 		EFB54A42214B850B006BC075 /* VCGohSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCGohSelect.swift; sourceTree = "<group>"; };
 		EFDF94BB214FB11B003AF3B4 /* VCCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCCustomer.swift; sourceTree = "<group>"; };
+		EFE3448B217073920034D8AF /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE3448D217077410034D8AF /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFE3449021707A3E0034D8AF /* Sample.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Sample.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +114,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFE3448E217077410034D8AF /* RealmSwift.framework in Frameworks */,
+				EFE3448C217073920034D8AF /* Realm.framework in Frameworks */,
 				8F0046D54FE995FE97612E8F /* Pods_KenshinApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +155,8 @@
 		5E46D8C30A7A20E4D617D33C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EFE3448D217077410034D8AF /* RealmSwift.framework */,
+				EFE3448B217073920034D8AF /* Realm.framework */,
 				06606ED1662C0C1D479398BC /* Pods_KenshinApp.framework */,
 				83EBD86C500DC2F890461FC7 /* Pods_KenshinAppTests.framework */,
 				32A1A9C5394A9D3667081F55 /* Pods_KenshinAppUITests.framework */,
@@ -183,13 +191,13 @@
 			children = (
 				EF508CFC2136B02F00073340 /* AppDelegate.swift */,
 				EF508CFE2136B02F00073340 /* ViewController.swift */,
+				EFE3449021707A3E0034D8AF /* Sample.csv */,
 				EF508D002136B02F00073340 /* Main.storyboard */,
 				EF508D2A2136B2D600073340 /* GasMenu.storyboard */,
 				72AF1BA321426C0A00264CDA /* Button_Custom.swift */,
 				EF508D30213D2A2400073340 /* Customer.storyboard */,
 				EF508D2E213D1E7300073340 /* GohSelect.storyboard */,
 				EF508D34213D2B9200073340 /* ResultReport.storyboard */,
-				EF4420542161BD6200E6D0AC /* Sample.csv */,
 				727E8CC02147B48400BBA9D3 /* NumberKeyBoard.swift */,
 				727E8CBE214758B800BBA9D3 /* VCInputScreen.swift */,
 				72AF1BA5214270E500264CDA /* CheckValuePopup.storyboard */,
@@ -339,7 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF442056216C96D500E6D0AC /* Sample.csv in Resources */,
+				EFE3449121707A3E0034D8AF /* Sample.csv in Resources */,
 				72AF1BA6214270E500264CDA /* CheckValuePopup.storyboard in Resources */,
 				EF508D31213D2A2400073340 /* Customer.storyboard in Resources */,
 				EF508D072136B02F00073340 /* LaunchScreen.storyboard in Resources */,

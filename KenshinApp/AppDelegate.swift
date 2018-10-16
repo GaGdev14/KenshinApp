@@ -14,21 +14,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    //func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         //既存のファイルとデータ構造が異なるときには自動的にファイルを消して、新しいスキーマで作り直す
-        let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+       // let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
 
         
         // Tell Realm to use this new configuration object for the default Realm
-        Realm.Configuration.defaultConfiguration = config
+        //Realm.Configuration.defaultConfiguration = config
         
         //デフォルトのレルムに対してこの新しい設定オブジェクトを使用するようにRealmに指示します
-        let realm = try! Realm()
-        print(realm, "Realm")
-        print(config,"Realm Version")
+        //let realm = try! Realm()
+        //print(realm, "Realm")
+        //print(config,"Realm Version")
+        //return true
+    //}
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        do {
+            let defaultURL = Realm.Configuration.defaultConfiguration.fileURL!
+            // Realmファイルを削除
+            try FileManager.default.removeItem( at: defaultURL) }
+        catch {
+            //削除できない場合の対応
+        }
         return true
     }
+        
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
