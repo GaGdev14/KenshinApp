@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		721CB67E21757CE700EAFF53 /* ColorDefinition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721CB67D21757CE700EAFF53 /* ColorDefinition.swift */; };
 		7221BDF4214212570070320D /* VCResultReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7221BDF3214212570070320D /* VCResultReport.swift */; };
 		727E8CBF214758B800BBA9D3 /* VCInputScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E8CBE214758B800BBA9D3 /* VCInputScreen.swift */; };
 		727E8CC12147B48400BBA9D3 /* NumberKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E8CC02147B48400BBA9D3 /* NumberKeyBoard.swift */; };
@@ -65,6 +66,7 @@
 		06606ED1662C0C1D479398BC /* Pods_KenshinApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KenshinApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A1A9C5394A9D3667081F55 /* Pods_KenshinAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KenshinAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35CA0113E51F876E3BE3D341 /* Pods-KenshinAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KenshinAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KenshinAppTests/Pods-KenshinAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		721CB67D21757CE700EAFF53 /* ColorDefinition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorDefinition.swift; sourceTree = "<group>"; };
 		7221BDF3214212570070320D /* VCResultReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCResultReport.swift; sourceTree = "<group>"; };
 		727E8CBE214758B800BBA9D3 /* VCInputScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCInputScreen.swift; sourceTree = "<group>"; };
 		727E8CC02147B48400BBA9D3 /* NumberKeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberKeyBoard.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				EF508D30213D2A2400073340 /* Customer.storyboard */,
 				EF508D2E213D1E7300073340 /* GohSelect.storyboard */,
 				EF508D34213D2B9200073340 /* ResultReport.storyboard */,
+				721CB67D21757CE700EAFF53 /* ColorDefinition.swift */,
 				727E8CC02147B48400BBA9D3 /* NumberKeyBoard.swift */,
 				727E8CBE214758B800BBA9D3 /* VCInputScreen.swift */,
 				72AF1BA5214270E500264CDA /* CheckValuePopup.storyboard */,
@@ -472,6 +475,7 @@
 				EF44204A21510C7D00E6D0AC /* MenuViewController.swift in Sources */,
 				EF44204C2159D8B000E6D0AC /* VCHandPrint.swift in Sources */,
 				7221BDF4214212570070320D /* VCResultReport.swift in Sources */,
+				721CB67E21757CE700EAFF53 /* ColorDefinition.swift in Sources */,
 				EFDF94BC214FB11B003AF3B4 /* VCCustomer.swift in Sources */,
 				EFB54A41214A7925006BC075 /* VCGasMenu.swift in Sources */,
 				EFB54A43214B850B006BC075 /* VCGohSelect.swift in Sources */,

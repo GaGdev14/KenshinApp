@@ -8,6 +8,11 @@
 
 /*
      検針値入力画面：ResultReportの入力用タブ設定用クラス
+ 
+    やることリスト
+    ・音声入力後、削除ボタンを押しても落ちないようにする
+    ・今月の検針値がマイナスの場合はエラーを表示する（できればブルブル）
+ 
 */
  
 import UIKit
@@ -20,6 +25,7 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
     @IBOutlet weak var usedThisMonth: UILabel!
     @IBOutlet weak var usedLastYear: UILabel!
     @IBOutlet weak var thisMonthValue: UITextField!
+    @IBOutlet weak var warningStatement: UILabel!
     
     var lastMonthValueStr: String = ""
     var usedThisMonthStr: String = ""
@@ -35,8 +41,15 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
     //録音の開始、停止ボタン
     var recordButton : UIButton!
     
+    // 次へボタン
+    @IBOutlet weak var nextPage: Button_Custom!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // 次へボタンの色定義
+        nextPage.backgroundColor = UIColor(hex: "E5523B")
+        nextPage.setTitleColor(UIColor(hex: "FFFFFF"), for: .normal)
         
         //入力ボックスのデフォルト値（うっすら表示する文字）
         thisMonthValue.placeholder = "入力してください"
@@ -62,7 +75,7 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         recordButton.frame = CGRect(x: 40, y: 100, width: 170, height: 40)
         recordButton.backgroundColor = UIColor.lightGray
         recordButton.addTarget(self, action: #selector(recordButtonTapped(sender:)), for:.touchUpInside)
-        recordButton.setTitle("音声入力開始", for: [])
+        recordButton.setTitle("🎤音声入力開始", for: [])
         recordButton.isEnabled = false
         self.view.addSubview(recordButton)
         //デリゲートの設定
@@ -218,6 +231,7 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
     
     public func changeIntVoiceMassage(voiceMessage: String){
         
+        
         let array = voiceMessage.components(separatedBy: ",")
         let afterVoiceMessage = array.joined()
         print(afterVoiceMessage)
@@ -227,10 +241,13 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         if(checkInt == true) {
             let text: Int = Int(afterVoiceMessage)!
             print(text)
+            self.warningStatement.text = ""
             //この後、計算メソッドを呼べばいけるはず
             calculateUsage(text: text)
         } else{
             print("数字を入力してください")
+            thisMonthValue.text = ""
+            warningStatement.text = "※音声入力再挑戦求む！"
         }
     }
 }
