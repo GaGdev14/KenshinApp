@@ -7,14 +7,28 @@
 //
 
 import UIKit
+import RealmSwift
 
 class VCCustomer:UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var custObjects: Results<DataModel>!
+    //インデックス
+    var num:Int = 0
+    
 
-    let CustInfo = ["社番：1000-000-0001","氏名：検針　花子","住所：","犬：","サービス：","検針関連"]
+    var CustInfo:[String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //初期化
+        CustInfo = ["社番：","氏名：","住所：","犬：","サービス：","検針関連"]
+        
+        //社番を追加
+        CustInfo[0] += String(custObjects[num].syaban)
+        //お名前を追加
+        CustInfo[1] += custObjects[num].name
+        
         // Do any additional setup after loading the view.
     }
 
@@ -53,9 +67,6 @@ class VCCustomer:UIViewController, UITableViewDelegate, UITableViewDataSource {
         // Tag番号 2 で UIImageView インスタンスの生成
         let imageView = cell.viewWithTag(2) as! UIImageView
         imageView.image = img
-        
-
-        
         
         return cell
     }
