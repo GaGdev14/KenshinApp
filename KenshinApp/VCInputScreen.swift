@@ -51,6 +51,9 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         nextPage.backgroundColor = UIColor(hex: "E5523B")
         nextPage.setTitleColor(UIColor(hex: "FFFFFF"), for: .normal)
         nextPage.layer.borderColor = UIColor(hex: "E5523B").cgColor
+        nextPage.layer.borderWidth = 2
+        nextPage.layer.cornerRadius = 26
+        
         
         //入力ボックスのデフォルト値（うっすら表示する文字）
         thisMonthValue.placeholder = "入力してください"
