@@ -50,6 +50,7 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         // 次へボタンの色定義
         nextPage.backgroundColor = UIColor(hex: "E5523B")
         nextPage.setTitleColor(UIColor(hex: "FFFFFF"), for: .normal)
+        nextPage.layer.borderColor = UIColor(hex: "E5523B").cgColor
         
         //入力ボックスのデフォルト値（うっすら表示する文字）
         thisMonthValue.placeholder = "入力してください"
