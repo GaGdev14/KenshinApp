@@ -23,16 +23,16 @@
                                 <rect key="frame" x="39" y="207" width="297" height="252"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="指示数確認" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-OU-flI">
-                                        <rect key="frame" x="105" y="14" width="87" height="21"/>
+                                        <rect key="frame" x="0.0" y="14" width="297" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k89-bX-Vev" customClass="Button_Custom" customModule="KenshinApp">
-                                        <rect key="frame" x="8" y="189" width="119" height="53"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k89-bX-Vev" customClass="Button_Custom" customModule="KenshinApp">
+                                        <rect key="frame" x="72" y="184" width="50" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="119" id="nj5-pM-9UQ"/>
+                                            <constraint firstAttribute="width" constant="50" id="nj5-pM-9UQ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <state key="normal" title="←">
@@ -54,11 +54,11 @@
                                             <action selector="onTapCancel:" destination="RcA-CE-PLa" eventType="touchUpInside" id="xxv-VP-MYx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pj-He-yey" customClass="Button_Custom" customModule="KenshinApp">
-                                        <rect key="frame" x="170" y="189" width="119" height="53"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pj-He-yey" customClass="Button_Custom" customModule="KenshinApp">
+                                        <rect key="frame" x="179" y="184" width="50" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="119" id="u0k-ES-JnL"/>
+                                            <constraint firstAttribute="width" constant="50" id="u0k-ES-JnL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                         <state key="normal" title="→">
@@ -129,10 +129,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iNH-bI-TDt"/>
                     </view>
+                    <connections>
+                        <outlet property="backPage" destination="k89-bX-Vev" id="QbP-du-LGr"/>
+                        <outlet property="nextPage" destination="8Pj-He-yey" id="Vbe-7T-cqk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flS-zO-MD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16.800000000000001" y="-5.8470764617691158"/>
+            <point key="canvasLocation" x="-2" y="-9"/>
         </scene>
         <!--ResultReport-->
         <scene sceneID="3xr-dZ-cM0">
