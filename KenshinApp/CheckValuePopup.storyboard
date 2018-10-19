@@ -23,7 +23,7 @@
                                 <rect key="frame" x="39" y="207" width="297" height="252"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="指示数確認" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-OU-flI">
-                                        <rect key="frame" x="105" y="14" width="87" height="21"/>
+                                        <rect key="frame" x="0.0" y="14" width="297" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -136,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flS-zO-MD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-16.800000000000001" y="-5.8470764617691158"/>
+            <point key="canvasLocation" x="-2" y="-9"/>
         </scene>
         <!--ResultReport-->
         <scene sceneID="3xr-dZ-cM0">

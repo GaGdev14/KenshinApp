@@ -76,6 +76,16 @@ class VCCustomer:UIViewController, UITableViewDelegate, UITableViewDataSource {
         return 60.0
     }
     
+    // このメソッドで渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ToResultReport" {
+            let vCResultReport:VCResultReport = segue.destination as! VCResultReport
+            vCResultReport.resultReportObjects = custObjects
+            vCResultReport.num = 0
+        }
+    }
+    
 
     /*
     // MARK: - Navigation

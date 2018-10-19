@@ -92,7 +92,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="n4x-HW-qCB" kind="show" id="EyQ-Jy-9C7"/>
+                                    <segue destination="n4x-HW-qCB" kind="show" identifier="ToResultReport" id="EyQ-Jy-9C7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QVH-cC-P5r" customClass="Button_Custom" customModule="KenshinApp">

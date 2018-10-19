@@ -8,6 +8,7 @@
 
 
 import UIKit
+import RealmSwift
 
 class VCResultReport: UIViewController {
     
@@ -19,13 +20,20 @@ class VCResultReport: UIViewController {
     @IBOutlet weak var gasMeterNumber: UILabel!
     @IBOutlet weak var customerName: UILabel!
     
+    //インデックス
+    var num:Int = 0
+    // Object受け取り
+    var resultReportObjects: Results<DataModel>!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         containers = [containerA,containerB]
         containerView.bringSubview(toFront: containerA)
         
-        gasMeterNumber.text = "111-11111-111"
-        customerName.text = "山田　花子"
+        gasMeterNumber.text = String(resultReportObjects[num].gmtSetNo)
+        customerName.text = resultReportObjects[num].name
     }
     
     override func didReceiveMemoryWarning() {

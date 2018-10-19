@@ -19,7 +19,7 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         
         // 色の定義
         // 背景：白
-        view.backgroundColor = UIColor(hex: "FFFFFF", alpha: 0.7)
+        // view.backgroundColor = UIColor(hex: "FFFFFF", alpha: 0.7)
         
         //ナビゲーションアイテムの色を変更
         UINavigationBar.appearance().tintColor = UIColor(hex: "E59292")
