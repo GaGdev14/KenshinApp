@@ -27,7 +27,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pfc-eM-Akq">
-                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="20" width="377" height="44"/>
                                 <textAttributes key="titleTextAttributes">
                                     <color key="textShadowColor" red="0.36470588235294116" green="0.25098039215686274" blue="0.21568627450980393" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
@@ -81,18 +81,8 @@
                                     <constraint firstItem="TdQ-uv-fg2" firstAttribute="baseline" secondItem="k3U-c9-d8R" secondAttribute="baseline" id="wb6-7u-Ozw"/>
                                 </constraints>
                             </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-iP-7TN">
-                                <rect key="frame" x="119" y="178" width="137" height="29"/>
-                                <segments>
-                                    <segment title="入力"/>
-                                    <segment title="その他"/>
-                                </segments>
-                                <connections>
-                                    <action selector="changeContainerView:" destination="leF-Qb-BSQ" eventType="valueChanged" id="MYF-7r-pM4"/>
-                                </connections>
-                            </segmentedControl>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UxB-ha-v9a">
-                                <rect key="frame" x="0.0" y="224" width="375" height="443"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UxB-ha-v9a">
+                                <rect key="frame" x="0.0" y="222" width="377" height="445"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bej-ao-0vU">
                                         <rect key="frame" x="0.0" y="11" width="375" height="432"/>
@@ -107,7 +97,7 @@
                                         </connections>
                                     </containerView>
                                     <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FMy-OL-GDs">
-                                        <rect key="frame" x="0.0" y="-17" width="375" height="3"/>
+                                        <rect key="frame" x="0.0" y="-17" width="377" height="3"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <rect key="contentStretch" x="0.0" y="0.0" width="1" height="0.14999999999999999"/>
                                     </view>
@@ -128,6 +118,17 @@
                                     <constraint firstItem="OWi-oV-o3l" firstAttribute="leading" secondItem="UxB-ha-v9a" secondAttribute="leading" id="zzN-y1-xRG"/>
                                 </constraints>
                             </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ekb-iP-7TN">
+                                <rect key="frame" x="1" y="175" width="375" height="29"/>
+                                <color key="backgroundColor" red="0.91616282996705733" green="0.93926945431479092" blue="0.92363149396141797" alpha="0.72999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <segments>
+                                    <segment title="入力"/>
+                                    <segment title="その他"/>
+                                </segments>
+                                <connections>
+                                    <action selector="changeContainerView:" destination="leF-Qb-BSQ" eventType="valueChanged" id="MYF-7r-pM4"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -135,8 +136,11 @@
                             <constraint firstItem="UxB-ha-v9a" firstAttribute="bottom" secondItem="HKY-sK-0Jj" secondAttribute="bottom" id="7EZ-Ds-Nxa"/>
                             <constraint firstItem="Pfc-eM-Akq" firstAttribute="leading" secondItem="ycB-tx-iiS" secondAttribute="leading" id="AXO-pQ-BmT"/>
                             <constraint firstItem="ekb-iP-7TN" firstAttribute="leading" secondItem="HKY-sK-0Jj" secondAttribute="leading" constant="119" id="Acg-cL-fyK"/>
+                            <constraint firstItem="ekb-iP-7TN" firstAttribute="leading" secondItem="HKY-sK-0Jj" secondAttribute="leading" constant="1" id="CfH-dD-zvv"/>
                             <constraint firstItem="UxB-ha-v9a" firstAttribute="leading" secondItem="ycB-tx-iiS" secondAttribute="leading" id="Hgu-V8-hi9"/>
                             <constraint firstItem="UxB-ha-v9a" firstAttribute="top" secondItem="ekb-iP-7TN" secondAttribute="bottom" constant="18" id="NMa-8q-EX1"/>
+                            <constraint firstItem="UxB-ha-v9a" firstAttribute="top" secondItem="ekb-iP-7TN" secondAttribute="bottom" constant="19" id="Tar-SW-Tbv"/>
+                            <constraint firstItem="ekb-iP-7TN" firstAttribute="trailing" secondItem="HKY-sK-0Jj" secondAttribute="trailing" constant="1" id="U4C-z5-dGw"/>
                             <constraint firstItem="ekb-iP-7TN" firstAttribute="top" secondItem="ycB-tx-iiS" secondAttribute="bottom" constant="8" symbolic="YES" id="dHw-9L-aKB"/>
                             <constraint firstItem="ycB-tx-iiS" firstAttribute="centerX" secondItem="ekb-iP-7TN" secondAttribute="centerX" id="fAT-d4-5Tl"/>
                             <constraint firstItem="Pfc-eM-Akq" firstAttribute="top" secondItem="HKY-sK-0Jj" secondAttribute="top" id="hv0-xQ-4Ge"/>
@@ -149,6 +153,7 @@
                         <viewLayoutGuide key="safeArea" id="HKY-sK-0Jj"/>
                     </view>
                     <connections>
+                        <outlet property="changePage" destination="ekb-iP-7TN" id="vUu-Km-44J"/>
                         <outlet property="containerA" destination="bej-ao-0vU" id="nev-dj-1Be"/>
                         <outlet property="containerB" destination="OWi-oV-o3l" id="z5g-1d-xFS"/>
                         <outlet property="containerView" destination="UxB-ha-v9a" id="j0c-Kz-gPj"/>
