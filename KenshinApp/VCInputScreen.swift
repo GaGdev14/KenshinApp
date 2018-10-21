@@ -17,6 +17,7 @@
  
 import UIKit
 import Speech
+import RealmSwift
 
 class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDelegate {
     
@@ -31,6 +32,12 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
     var usedThisMonthStr: String = ""
     var usedLastYearStr: String = ""
     var thisMonthValueStr: String = ""
+    
+    //インデックス
+    var num:Int = 0
+    // Object受け取り
+    var inputScreenObjects: Results<DataModel>!
+
     
     // 音声入力機能プロパティ
     // localeのidentifierに言語を指定。日本語はja-JP,英語はen-US
@@ -254,6 +261,19 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
             warningStatement.text = "※音声入力再挑戦求む！"
         }
     }
+    
+    
+    // このメソッドで渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ToCheckValuePopup" {
+            let vCCheckValuePopup:VCCheckValuePopup = segue.destination as! VCCheckValuePopup
+            vCCheckValuePopup.checkValuePopupObjects = inputScreenObjects
+            vCCheckValuePopup.num = 0
+        }
+    }
+ 
+
 }
 
 extension String {

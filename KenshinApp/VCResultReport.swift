@@ -40,6 +40,19 @@ class VCResultReport: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
+    // このメソッドで渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ToInputScreen" {
+            let vCInputScreen:VCInputScreen = segue.destination as! VCInputScreen
+            vCInputScreen.inputScreenObjects = resultReportObjects
+            vCInputScreen.num = 0
+            
+        }
+    }
+
+    
     @IBAction func changeContainerView(_ sender: UISegmentedControl) {
         let currentContainerView = containers[sender.selectedSegmentIndex]
         containerView.bringSubview(toFront: currentContainerView)

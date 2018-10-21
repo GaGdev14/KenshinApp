@@ -7,12 +7,20 @@
 //
 
 import UIKit
+import RealmSwift
 
 class VCCheckValuePopup: UIViewController {
     
     
+    @IBOutlet weak var thisMonthValue: UILabel!
+    @IBOutlet weak var lastMonthValue: UILabel!
     @IBOutlet weak var nextPage: Button_Custom!
     @IBOutlet weak var backPage: Button_Custom!
+    var checkValuePopupObjects: Results<DataModel>!
+    
+    
+    //インデックス
+    var num:Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +43,8 @@ class VCCheckValuePopup: UIViewController {
         backPage.layer.borderWidth = 2
         backPage.layer.cornerRadius = 26
         
+        thisMonthValue.text = String(checkValuePopupObjects[num].thisMonthValue)
+        lastMonthValue.text = String(checkValuePopupObjects[num].lastMonthValue)
         
         // Do any additional setup after loading the view.
     }
@@ -48,6 +58,20 @@ class VCCheckValuePopup: UIViewController {
     @IBAction func onTapCancel(_ sender: UIButton) {
         self.dismiss(animated: false, completion: nil)
     }
+    
+    
+    // このメソッドで渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ToCustomer" {
+            let vCCustomer:VCCustomer = segue.destination as! VCCustomer
+            vCCustomer.custObjects = checkValuePopupObjects
+            vCCustomer.num = 0
+            
+        }
+    }
+
+ 
     
 }
 

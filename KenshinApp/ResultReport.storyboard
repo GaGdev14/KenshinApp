@@ -97,7 +97,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bej-ao-0vU">
                                         <rect key="frame" x="0.0" y="11" width="375" height="432"/>
                                         <connections>
-                                            <segue destination="m4d-gR-Hq2" kind="embed" id="sJh-0e-zTI"/>
+                                            <segue destination="m4d-gR-Hq2" kind="embed" identifier="ToInputScreen" id="sJh-0e-zTI"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWi-oV-o3l">
@@ -253,7 +253,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="wrd-IK-3rK" kind="show" id="7QM-Gq-LCG"/>
+                                    <segue destination="wrd-IK-3rK" kind="show" identifier="ToCheckValuePopup" id="7QM-Gq-LCG"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -47,6 +47,11 @@ class DataManager: Object {
         data.syaban = Int(splitStr[3])!
         data.gohDetail = splitStr[4]
         data.jusho = splitStr[5]
+        data.thisMonthValue = Int(splitStr[6])!
+        data.lastMonthValue = Int(splitStr[7])!
+        data.usedThisMonth = Int(splitStr[8])!
+        data.usedLastMonth = Int(splitStr[9])!
+        data.usedLastYear = Int(splitStr[10])!
         
         // 保存
         let realm = try! Realm()

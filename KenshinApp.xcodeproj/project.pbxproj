@@ -191,10 +191,10 @@
 		EF508CFB2136B02F00073340 /* KenshinApp */ = {
 			isa = PBXGroup;
 			children = (
+				EF508D002136B02F00073340 /* Main.storyboard */,
 				EF508CFC2136B02F00073340 /* AppDelegate.swift */,
 				EF508CFE2136B02F00073340 /* ViewController.swift */,
 				EFE3449021707A3E0034D8AF /* Sample.csv */,
-				EF508D002136B02F00073340 /* Main.storyboard */,
 				EF508D2A2136B2D600073340 /* GasMenu.storyboard */,
 				72AF1BA321426C0A00264CDA /* Button_Custom.swift */,
 				EF508D30213D2A2400073340 /* Customer.storyboard */,

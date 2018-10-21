@@ -77,7 +77,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Vwn-78-Qwv" kind="show" id="UKk-rW-LMz"/>
+                                            <segue destination="7iV-9q-gnt" kind="show" identifier="ToCustomer" id="A6J-Xh-NKc"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="今回：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qi-4I-RFj">
@@ -131,20 +131,22 @@
                     </view>
                     <connections>
                         <outlet property="backPage" destination="k89-bX-Vev" id="QbP-du-LGr"/>
+                        <outlet property="lastMonthValue" destination="IkA-pX-myi" id="vjU-bk-SWy"/>
                         <outlet property="nextPage" destination="8Pj-He-yey" id="Vbe-7T-cqk"/>
+                        <outlet property="thisMonthValue" destination="CQa-Ri-1hj" id="oN9-dR-SJW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flS-zO-MD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2" y="-9"/>
         </scene>
-        <!--ResultReport-->
-        <scene sceneID="3xr-dZ-cM0">
+        <!--Customer-->
+        <scene sceneID="Rkk-Xf-YsR">
             <objects>
-                <viewControllerPlaceholder storyboardName="ResultReport" id="Vwn-78-Qwv" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oNS-aX-40C" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardIdentifier="ToCustomer1" storyboardName="Customer" id="7iV-9q-gnt" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pyp-ql-mTv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="684" y="51"/>
+            <point key="canvasLocation" x="856" y="-11"/>
         </scene>
     </scenes>
 </document>
