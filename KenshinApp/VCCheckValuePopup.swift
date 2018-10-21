@@ -21,6 +21,9 @@ class VCCheckValuePopup: UIViewController {
     
     //インデックス
     //var num:Int = 0
+    //DB更新用変数
+    var thisMonthValueInt :Int = 0
+    var usedThisMonthInt :Int = 0
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -44,7 +47,7 @@ class VCCheckValuePopup: UIViewController {
         backPage.layer.borderWidth = 2
         backPage.layer.cornerRadius = 26
         
-        thisMonthValue.text = String(checkValuePopupObjects[appDelegate.num!].thisMonthValue)
+        thisMonthValue.text = String(thisMonthValueInt)
         lastMonthValue.text = String(checkValuePopupObjects[appDelegate.num!].lastMonthValue)
         
         // Do any additional setup after loading the view.
@@ -60,6 +63,25 @@ class VCCheckValuePopup: UIViewController {
         self.dismiss(animated: false, completion: nil)
     }
     
+    //決定ボタンが押下された時
+    @IBAction func done(_ sender: Any) {
+        
+        let realm = try! Realm()
+        //1xで検索
+        let gmtSetNo = checkValuePopupObjects[appDelegate.num!].gmtSetNo
+        // 保存するObjectの取得
+        let object = realm.object( ofType: DataModel.self,forPrimaryKey:gmtSetNo)!
+
+        //DB更新処理
+        try! realm.write() {
+            //今回検針値更新
+            object.thisMonthValue = thisMonthValueInt
+            //今回使用量更新
+            object.usedThisMonth = usedThisMonthInt
+            
+        }
+    }
+        
     
     // このメソッドで渡す
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -76,7 +98,5 @@ class VCCheckValuePopup: UIViewController {
         }
     }
 
- 
-    
 }
 

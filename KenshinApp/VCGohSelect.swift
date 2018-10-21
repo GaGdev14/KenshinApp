@@ -21,6 +21,8 @@ class VCGohSelect: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource
     
     var pickerView: UIPickerView = UIPickerView()
     var gohList : [String] = []
+    var gohList2 : [String] = []
+
     var selectObjects: Results<DataModel>!
     var selectGohDetail : [String] = []
 
@@ -58,6 +60,8 @@ class VCGohSelect: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource
             let object = objects[i]
             gohList.append(object.goh)
         }
+        let orderedSet:NSOrderedSet = NSOrderedSet(array: gohList)
+        gohList2 = orderedSet.array as! [String]
         
         //号番号初期値表示
         SelectGohNo.text = objects[0].goh
@@ -81,12 +85,14 @@ class VCGohSelect: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource
         // Do any additional setup after loading the view.
     }
 
+    
+    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return gohList.count
+        return gohList2.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -94,7 +100,7 @@ class VCGohSelect: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource
         //Realmのインスタンス取得
         let realm = try! Realm()
         
-        selectObjects = realm.objects(DataModel.self).filter("goh = %@", gohList[row])
+        selectObjects = realm.objects(DataModel.self).filter("goh = %@", gohList2[row])
         //選択されたgohでフィルターしたオブジェクトを格納
         for i in 0..<selectObjects.count {
             let object = selectObjects[i]
@@ -104,11 +110,11 @@ class VCGohSelect: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource
         //選択済みの号の詳細1件目を表示
         Gohdetails.text = selectObjects[0].gohDetail
         
-        return gohList[row]
+        return gohList2[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.SelectGohNo.text = gohList[row]
+        self.SelectGohNo.text = gohList2[row]
   }
     
     @objc func cancel() {

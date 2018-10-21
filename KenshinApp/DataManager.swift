@@ -61,6 +61,9 @@ class DataManager: Object {
             }
         } catch {
             print("エラー")
+    
         }
     }
+    
+
 }
