@@ -21,9 +21,12 @@ class VCResultReport: UIViewController {
     @IBOutlet weak var customerName: UILabel!
     
     //インデックス
-    var num:Int = 0
+    //var num:Int = 0
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     // Object受け取り
     var resultReportObjects: Results<DataModel>!
+    
     
     
     @IBOutlet weak var changePage: UISegmentedControl!
@@ -33,8 +36,8 @@ class VCResultReport: UIViewController {
         containers = [containerA,containerB]
         containerView.bringSubview(toFront: containerA)
         
-        gasMeterNumber.text = String(resultReportObjects[num].gmtSetNo)
-        customerName.text = resultReportObjects[num].name
+        gasMeterNumber.text = String(resultReportObjects[appDelegate.num!].gmtSetNo)
+        customerName.text = resultReportObjects[appDelegate.num!].name
         
         // UISegmentedControlの配色設定
         changePage.tintColor = UIColor(hex: "FFFFFF")
@@ -52,7 +55,7 @@ class VCResultReport: UIViewController {
         if segue.identifier == "ToInputScreen" {
             let vCInputScreen:VCInputScreen = segue.destination as! VCInputScreen
             vCInputScreen.inputScreenObjects = resultReportObjects
-            vCInputScreen.num = 0
+            //vCInputScreen.num = 0
             
         }
     }

@@ -10,6 +10,7 @@ import Foundation
 import RealmSwift
 
 class DataModel: Object {
+    
     //1x
     @objc dynamic var gmtSetNo: Int = 0
     //お客様名

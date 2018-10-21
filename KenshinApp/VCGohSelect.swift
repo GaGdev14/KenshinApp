@@ -130,7 +130,11 @@ class VCGohSelect: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource
         if segue.identifier == "ToCustmer" {
             let vCCustomer:VCCustomer = segue.destination as! VCCustomer
             vCCustomer.custObjects = selectObjects
-            vCCustomer.num = 0
+            
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            //号選択画面で必ずインデックスを初期化する
+            appDelegate.num = 0
+            
         }
     }
     

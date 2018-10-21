@@ -34,7 +34,8 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
     var thisMonthValueStr: String = ""
     
     //インデックス
-    var num:Int = 0
+    //var num:Int = 0
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     // Object受け取り
     var inputScreenObjects: Results<DataModel>!
 
@@ -72,9 +73,9 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         thisMonthValue.delegate = self
         
         //のちのちここで代入
-        lastMonthValueStr = "1256"
+        lastMonthValueStr = String(inputScreenObjects[appDelegate.num!].lastMonthValue)
         lastMonthValue.text = lastMonthValueStr
-        usedLastYearStr = "34"
+        usedLastYearStr = String(inputScreenObjects[appDelegate.num!].usedLastYear)
         usedLastYear.text = usedLastYearStr
         
         // 音声入力
@@ -269,7 +270,7 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         if segue.identifier == "ToCheckValuePopup" {
             let vCCheckValuePopup:VCCheckValuePopup = segue.destination as! VCCheckValuePopup
             vCCheckValuePopup.checkValuePopupObjects = inputScreenObjects
-            vCCheckValuePopup.num = 0
+            //vCCheckValuePopup.num = 0
         }
     }
  

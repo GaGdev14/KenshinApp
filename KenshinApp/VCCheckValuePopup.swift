@@ -20,7 +20,8 @@ class VCCheckValuePopup: UIViewController {
     
     
     //インデックス
-    var num:Int = 0
+    //var num:Int = 0
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +44,8 @@ class VCCheckValuePopup: UIViewController {
         backPage.layer.borderWidth = 2
         backPage.layer.cornerRadius = 26
         
-        thisMonthValue.text = String(checkValuePopupObjects[num].thisMonthValue)
-        lastMonthValue.text = String(checkValuePopupObjects[num].lastMonthValue)
+        thisMonthValue.text = String(checkValuePopupObjects[appDelegate.num!].thisMonthValue)
+        lastMonthValue.text = String(checkValuePopupObjects[appDelegate.num!].lastMonthValue)
         
         // Do any additional setup after loading the view.
     }
@@ -66,8 +67,12 @@ class VCCheckValuePopup: UIViewController {
         if segue.identifier == "ToCustomer" {
             let vCCustomer:VCCustomer = segue.destination as! VCCustomer
             vCCustomer.custObjects = checkValuePopupObjects
-            vCCustomer.num = 0
-            
+            if appDelegate.num! < checkValuePopupObjects.count-1{
+                appDelegate.num!  += 1
+            }
+            else{
+                appDelegate.num! = 0
+            }
         }
     }
 
