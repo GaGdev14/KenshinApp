@@ -26,6 +26,7 @@ class VCResultReport: UIViewController {
     var resultReportObjects: Results<DataModel>!
     
     
+    @IBOutlet weak var changePage: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,10 @@ class VCResultReport: UIViewController {
         
         gasMeterNumber.text = String(resultReportObjects[num].gmtSetNo)
         customerName.text = resultReportObjects[num].name
+        
+        // UISegmentedControlの配色設定
+        changePage.tintColor = UIColor(hex: "FFFFFF")
+        changePage.backgroundColor = UIColor(hex: "563F4A")
     }
     
     override func didReceiveMemoryWarning() {
