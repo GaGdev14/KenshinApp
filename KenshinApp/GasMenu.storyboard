@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="ガス検針メニュー" id="zUj-m2-mqB">
-                                        <barButtonItem key="leftBarButtonItem" title="ログイン" id="XwE-it-Nzb">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="XwE-it-Nzb">
                                             <connections>
                                                 <segue destination="Pyy-Mn-lO7" kind="show" id="qu7-Zw-sfX"/>
                                             </connections>

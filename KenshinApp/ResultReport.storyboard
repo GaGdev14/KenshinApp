@@ -33,7 +33,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="検針結果入力" id="ipI-8o-LWB">
-                                        <barButtonItem key="leftBarButtonItem" title="お客さま" id="tb3-1L-Fmg">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="tb3-1L-Fmg">
                                             <connections>
                                                 <segue destination="EnP-oF-MKl" kind="show" id="Z7D-1d-SCk"/>
                                             </connections>

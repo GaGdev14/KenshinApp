@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="号選択画面" id="x2V-Ha-cZ3">
-                                        <barButtonItem key="leftBarButtonItem" title="ガス検針メニュー" id="c05-89-Mak">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="c05-89-Mak">
                                             <connections>
                                                 <segue destination="ec7-vw-FxN" kind="show" id="39W-3j-8UT"/>
                                             </connections>
