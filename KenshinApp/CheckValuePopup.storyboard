@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,15 +20,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BdH-Cr-gtV">
-                                <rect key="frame" x="39" y="207" width="297" height="252"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BdH-Cr-gtV">
+                                <rect key="frame" x="44" y="207" width="297" height="252"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="指示数確認" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-OU-flI">
-                                        <rect key="frame" x="0.0" y="14" width="297" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k89-bX-Vev" customClass="Button_Custom" customModule="KenshinApp">
                                         <rect key="frame" x="72" y="184" width="50" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,15 +104,25 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="指示数確認" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kac-OU-flI">
+                                        <rect key="frame" x="0.0" y="0.0" width="297" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="bZj-By-KQ2"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="8Pj-He-yey" firstAttribute="trailing" secondItem="BdH-Cr-gtV" secondAttribute="trailingMargin" id="ClO-IC-2dQ"/>
-                                    <constraint firstItem="Kac-OU-flI" firstAttribute="top" secondItem="BdH-Cr-gtV" secondAttribute="topMargin" id="Hxz-B5-BUJ"/>
                                     <constraint firstItem="k89-bX-Vev" firstAttribute="leading" secondItem="BdH-Cr-gtV" secondAttribute="leadingMargin" id="ISj-vf-UPL"/>
+                                    <constraint firstItem="Kac-OU-flI" firstAttribute="top" secondItem="BdH-Cr-gtV" secondAttribute="firstBaseline" id="T3g-3b-Pur"/>
                                     <constraint firstAttribute="bottom" secondItem="k89-bX-Vev" secondAttribute="bottom" constant="10" id="Wf4-S4-Zrr"/>
                                     <constraint firstItem="8Pj-He-yey" firstAttribute="baseline" secondItem="k89-bX-Vev" secondAttribute="baseline" id="aJR-ok-3Tm"/>
-                                    <constraint firstItem="Kac-OU-flI" firstAttribute="centerX" secondItem="BdH-Cr-gtV" secondAttribute="centerX" id="aZY-6F-Zq2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kac-OU-flI" secondAttribute="trailing" id="rLV-d3-oZF"/>
+                                    <constraint firstItem="Kac-OU-flI" firstAttribute="leading" secondItem="BdH-Cr-gtV" secondAttribute="leading" id="u9x-Tv-D9Q"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -134,12 +139,13 @@
                         <outlet property="backPage" destination="k89-bX-Vev" id="QbP-du-LGr"/>
                         <outlet property="lastMonthValue" destination="IkA-pX-myi" id="vjU-bk-SWy"/>
                         <outlet property="nextPage" destination="8Pj-He-yey" id="Vbe-7T-cqk"/>
+                        <outlet property="popupTitle" destination="Kac-OU-flI" id="LBB-2y-iaj"/>
                         <outlet property="thisMonthValue" destination="CQa-Ri-1hj" id="oN9-dR-SJW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flS-zO-MD6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="-9"/>
+            <point key="canvasLocation" x="-2.3999999999999999" y="-9.4452773613193415"/>
         </scene>
         <!--Customer-->
         <scene sceneID="Rkk-Xf-YsR">

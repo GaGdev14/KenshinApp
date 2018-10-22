@@ -18,6 +18,8 @@ class VCCheckValuePopup: UIViewController {
     @IBOutlet weak var backPage: Button_Custom!
     var checkValuePopupObjects: Results<DataModel>!
     
+    @IBOutlet weak var popupTitle: UILabel!
+    
     
     //インデックス
     //var num:Int = 0
@@ -39,6 +41,12 @@ class VCCheckValuePopup: UIViewController {
         // 横幅と高さは50ずつでStoryBordから設定
         // さらに、ConstraintsのWidthEquailsも50にしないと幅が変わらない
         // ※いずれコード上で設定する※
+        
+        popupTitle.backgroundColor = UIColor(hex: "3F2D2D")
+        popupTitle.textColor = UIColor(hex: "FFFFFF")
+        popupTitle.textAlignment = NSTextAlignment.center
+        //フォントスタイルをBoldにして太くする
+        // Constraintsで幅指定追加
         
         // 前へボタンの色定義
         backPage.backgroundColor = UIColor(hex: "E5523B")
