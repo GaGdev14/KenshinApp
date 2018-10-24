@@ -13,8 +13,8 @@ class VCCustomer:UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var custObjects: Results<DataModel>!
     //インデックス
-    var num:Int = 0
-    
+    //var num:Int = 0
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     var CustInfo:[String] = []
     
@@ -25,9 +25,9 @@ class VCCustomer:UIViewController, UITableViewDelegate, UITableViewDataSource {
         CustInfo = ["社番：","氏名：","住所：","犬：","サービス：","検針関連"]
         
         //社番を追加
-        CustInfo[0] += String(custObjects[num].syaban)
+        CustInfo[0] += String(custObjects[appDelegate.num!].syaban)
         //お名前を追加
-        CustInfo[1] += custObjects[num].name
+        CustInfo[1] += custObjects[appDelegate.num!].name
         
         // Do any additional setup after loading the view.
     }
@@ -82,7 +82,8 @@ class VCCustomer:UIViewController, UITableViewDelegate, UITableViewDataSource {
         if segue.identifier == "ToResultReport" {
             let vCResultReport:VCResultReport = segue.destination as! VCResultReport
             vCResultReport.resultReportObjects = custObjects
-            vCResultReport.num = 0
+            //vCResultReport.num = 0
+            
         }
     }
     

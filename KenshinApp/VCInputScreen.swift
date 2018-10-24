@@ -17,6 +17,7 @@
  
 import UIKit
 import Speech
+import RealmSwift
 
 class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDelegate {
     
@@ -28,9 +29,16 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
     @IBOutlet weak var warningStatement: UILabel!
     
     var lastMonthValueStr: String = ""
-    var usedThisMonthStr: String = ""
+    var usedThisMonthInt: Int = 0
     var usedLastYearStr: String = ""
-    var thisMonthValueStr: String = ""
+    var thisMonthValueInt: Int = 0
+    
+    //インデックス
+    //var num:Int = 0
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    // Object受け取り
+    var inputScreenObjects: Results<DataModel>!
+
     
     // 音声入力機能プロパティ
     // localeのidentifierに言語を指定。日本語はja-JP,英語はen-US
@@ -56,7 +64,13 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         
         
         //入力ボックスのデフォルト値（うっすら表示する文字）
-        thisMonthValue.placeholder = "入力してください"
+        if inputScreenObjects[appDelegate.num!].thisMonthValue != 0{
+            thisMonthValue.placeholder = String(inputScreenObjects[appDelegate.num!].thisMonthValue)
+            thisMonthValueInt = inputScreenObjects[appDelegate.num!].thisMonthValue
+        }
+        else{
+            thisMonthValue.placeholder = "入力してください"
+        }
         
         //数字のキーボードを表示する
         self.thisMonthValue.keyboardType = UIKeyboardType.numberPad
@@ -65,9 +79,9 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         thisMonthValue.delegate = self
         
         //のちのちここで代入
-        lastMonthValueStr = "1256"
+        lastMonthValueStr = String(inputScreenObjects[appDelegate.num!].lastMonthValue)
         lastMonthValue.text = lastMonthValueStr
-        usedLastYearStr = "34"
+        usedLastYearStr = String(inputScreenObjects[appDelegate.num!].usedLastYear)
         usedLastYear.text = usedLastYearStr
         
         // 音声入力
@@ -133,7 +147,7 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
     public func calculateUsage(text: Int){
         
         // var thisMonth: Int = 0
-        var thisMonth: Int = text
+        let thisMonth: Int = text
         var lastMonth: Int = 0
         
         //thisMonth = Int(text)! //音声入力結果を削除すると、ここでエラーになる
@@ -143,6 +157,9 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
         let gasUsage: Int = thisMonth - lastMonth
         print(gasUsage)
         
+        //DB更新用の値を変数に代入
+        thisMonthValueInt = thisMonth
+        usedThisMonthInt = gasUsage
         usedThisMonth.text = String(gasUsage)
         
     }
@@ -254,6 +271,20 @@ class VCInputScreen: UIViewController, UITextFieldDelegate, SFSpeechRecognizerDe
             warningStatement.text = "※音声入力再挑戦求む！"
         }
     }
+    
+    // このメソッドで渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "ToCheckValuePopup" {
+            let vCCheckValuePopup:VCCheckValuePopup = segue.destination as! VCCheckValuePopup
+            vCCheckValuePopup.checkValuePopupObjects = inputScreenObjects
+            //DB更新用値受け渡し
+            vCCheckValuePopup.thisMonthValueInt = thisMonthValueInt
+            vCCheckValuePopup.usedThisMonthInt = usedThisMonthInt
+        }
+    }
+ 
+
 }
 
 extension String {

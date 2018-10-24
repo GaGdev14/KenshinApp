@@ -22,9 +22,15 @@ class ViewController: UIViewController ,UITextFieldDelegate {
         // view.backgroundColor = UIColor(hex: "FFFFFF", alpha: 0.7)
         
         //ナビゲーションアイテムの色を変更
-        UINavigationBar.appearance().tintColor = UIColor(hex: "E59292")
+        UINavigationBar.appearance().tintColor = UIColor(hex: "FF5722")
+        //UINavigationBar.appearance().tintColor = UIColor(hex: "FFFFFF")
+
+        
         //ナビゲーションバーの背景を変更
-        UINavigationBar.appearance().barTintColor = UIColor(hex: "3F2D2D")
+        UINavigationBar.appearance().barTintColor = UIColor(hex: "5D4037")
+        //UINavigationBar.appearance().barTintColor = UIColor(hex: "795548")
+
+        
         //ナビゲーションのタイトル文字列の色を変更
         // self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().barStyle = UIBarStyle.black

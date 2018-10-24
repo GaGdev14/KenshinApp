@@ -31,7 +31,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="お客さま" id="2AO-iy-Qgb">
-                                        <barButtonItem key="leftBarButtonItem" title="号選択画面" id="A7l-UA-GTj">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="A7l-UA-GTj">
                                             <connections>
                                                 <segue destination="Z9L-9c-NCe" kind="show" id="Khc-Uk-jxU"/>
                                             </connections>

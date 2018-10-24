@@ -33,7 +33,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="検針結果入力" id="ipI-8o-LWB">
-                                        <barButtonItem key="leftBarButtonItem" title="お客さま" id="tb3-1L-Fmg">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="tb3-1L-Fmg">
                                             <connections>
                                                 <segue destination="EnP-oF-MKl" kind="show" id="Z7D-1d-SCk"/>
                                             </connections>
@@ -87,7 +87,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bej-ao-0vU">
                                         <rect key="frame" x="0.0" y="11" width="375" height="432"/>
                                         <connections>
-                                            <segue destination="m4d-gR-Hq2" kind="embed" id="sJh-0e-zTI"/>
+                                            <segue destination="m4d-gR-Hq2" kind="embed" identifier="ToInputScreen" id="sJh-0e-zTI"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OWi-oV-o3l">
@@ -258,7 +258,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="wrd-IK-3rK" kind="show" id="7QM-Gq-LCG"/>
+                                    <action selector="done:" destination="BgL-5v-bFN" eventType="touchUpInside" id="ctD-Dc-XMX"/>
+                                    <segue destination="wrd-IK-3rK" kind="show" identifier="ToCheckValuePopup" id="7QM-Gq-LCG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -275,6 +276,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qes-Z2-WEl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="BgL-5v-bFN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="872.79999999999995" y="-9.8950524737631191"/>
         </scene>
